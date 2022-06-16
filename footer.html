@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .footer{
+    width: 100%;
+    height: 180px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color:rgb(211, 199, 199);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+}
+.google{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.google>input{
+    width: 50%;
+    height: 25px;
+}
+#srchBtn{
+    margin-top: 5px;
+}
+#srchBtn>i{
+   font-size: 10px;
+   padding: 4px;
+}
+.footerNav>ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px 15px 5px 15px;
+    
+}
+.footerNav>ul>li{
+    font-size: 12px;
+    font-weight: 600;
+    color: gray;
+    padding: 4px;
+}
+.copyright>p{
+    color: gray;
+}
+#srchBtn:hover{
+    background-color: black;
+    color: white;
+}
+</style>
+
+<body>
+
+    <div class="footer">
+        <div class="google">
+        <input type="text" id="search" placeholder="Google Search" value="">
+        <button id="srchBtn"> <i class="fa-solid fa-magnifying-glass">  Search</i>  </button>
+    </div>
+    
+        <div class="footerNav">
+            <ul>
+                <li>HOME</li>
+                <li>ASIAN AGE</li>
+                <li>ANDHRABHOOMI</li>
+                <li>FINANCIAL CHRONICLE</li>
+                <li>ABOUT US</li>
+                <li>CONTACT US</li>
+                <li>CLASSIFIEDS</li>
+                <li>BOOK CLASSIFIEDS</li>
+                <li>FEEDBACK</li>
+                <li>CAREERS</li>
+                <li>E-PAPER</li>
+                <li>PRIVACY POLICY</li>
+            </ul>
+    
+            <div class="copyright">
+                <p>Copyright © 2015 - 2022 Deccan Chronicle.
+                    Designed, Developed & Maintained By Daksham</p>
+            </div>
+        </div>
+    </div>
+  
+    
+
+</body>
+</html>
+<script>
+    let searchBtn= document.querySelector("#srchBtn");
+let search= document.querySelector("#search");
+
+searchBtn.addEventListener("click", function(){
+    let url= 'https://www.google.com/search?q=' + search.value ;
+    window.open(url);
+})
+
+</script>
