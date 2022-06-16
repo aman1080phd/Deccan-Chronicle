@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://kit.fontawesome.com/9a14a7de65.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans',sans-serif;
+    }
+    body{
+        width: 100vw;
+        text-align: center;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+    .container{
+        margin: auto;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #navbar{
+        width: 100%;
+        display: flex;
+        background-color: black;
+        color: white;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+        height: 50px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        position: sticky;
+        top: 0;
+    }
+    .socialMedia>ul>li>a{
+        color: white;
+    }
+    .mid{
+        display: flex;
+        margin: 0 38px 0 16px;
+    }
+    .mid>p>a{
+        color: white;
+        text-decoration: none;
+    }
+    .socialMedia>ul{
+        display: flex;
+        align-items: center;
+    }
+    .socialMedia>ul>li{
+        padding: 0 9px 0 9px;
+    }
+    .right{
+        display: flex;
+    }
+    .first{
+        border-right: 2px solid white;
+        padding-right: 5px;
+    }
+    .rightFirst{
+        border-right: 2px solid white;
+        padding-right: 6px;
+    }
+    .rightFirst+p{
+        margin-left: 6px;
+    }
+    .left{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .socialMedia>ul>li:hover{
+        cursor: pointer;
+    }
+    #checkbox:hover{
+        cursor: pointer;
+    }
+
+    #navbar>.left>i:hover{
+        cursor: pointer;
+    }
+    .first:hover{
+        cursor: pointer;
+    }
+    .second:hover{
+        cursor: pointer;
+    }
+    .socialMedia>ul>li>img{
+        display: flex;
+        justify-content: center;
+        width: 32px;
+    }
+    li{
+        list-style: none;
+        
+    }
+    i{
+        font-size: 26px;
+    }
+    /* ////////////////////////////logo//////////////////////// */
+    .logo{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 26px 0 26px 0;
+       border-bottom: 4px solid black;
+       overflow: hidden;
+    }
+    .logo>span{
+        margin-top: 30px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+   
+
+
+    /* ////////////////////navbar2/////////////////////// */
+    .navbar2{
+        margin: auto;
+        /* margin-left: 134px; */
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid black;
+        margin-top: 12px;
+    }
+    .navbar2>ul{
+        display: flex;
+        align-items: center;
+    }
+    .navbar2>ul>li{
+        margin-bottom: 12px;
+    }
+    .navbar2>ul>li>a{
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        padding:12px;
+    }
+    .fa-angle-down{
+        font-size: 14px;
+    }
+    /* ----------------------advertisement----------------------- */
+    .advertisement{
+        margin-top: 20px;
+        width: 100%;
+        height: 160px;
+        border: 1px solid black;
+    }
+    /* -------------------date---------------------------------- */
+  
+.date {
+    font-size: 14px;
+    font-weight: bold;
+    color:black;
+    width: 30vw;
+    height: 44px;
+  animation-duration: 2s;
+  animation-name: slide;
+  animation-iteration-count: 1;
+}
+@keyframes slide {
+  from {
+    margin-left: 100%;
+   
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+    /* ------------------pointer-------------------------------- */
+    .pointer{
+        width: 100%;
+        text-align: left;
+        margin: auto;
+    }
+    .pointer>a>i{
+        color: black;
+        font-size: 15px;
+    }
+    /* ---------------------------h1-------------------------- */
+    .pointer>h1{
+        width: 100%;
+        font-size: 16px;
+        text-align: left;
+        font-weight: 600;
+    }
+    /* ---------------------BOX1----------------------------- */
+   .box1{
+    width: 100%;
+    display: flex;
+    
+   }
+   .box11{
+    width: 70%;
+    display: flex;
+   }
+   .box12{
+    width: 30%;
+   }
+   .box111{
+    width:  70%;
+    text-align: left;
+   }
+   .box112{
+    width: 30%;
+    padding-left: 10px;
+   }
+   .box113{
+    width: 100%;
+   }
+   .box1111{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 5px;
+   }
+   .box1121{
+ width: 99%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 5px;
+   }
+   .box121{
+    width: 95%;
+    text-align: center;
+    margin: auto;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 5px;
+   }
+   .box122{
+width: 100%;
+display: flex;
+justify-content: space-between;
+text-align: left;
+margin:15px 0 15px 0;
+box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 5px;
+   }
+   /* ------------------------------------------------------- */
+   .box1111>img{
+    width: 100%;
+   }
+   .box1111>h1{
+    font-size: 18px;
+    padding: 4px;
+   }
+   .box1111>p{
+    font-size: 16px;
+    padding: 4px;
+   }
+   .box1121>img{
+   padding: 10px;
+    width: 40%;
+   }
+   .box1121>h2{
+    text-align: left;
+    width: 60%;
+    font-size: 10px;
+   }
+   .box121{
+    width: 90%;
+    height: 220px;
+    
+   }
+   .box122>img{
+    width: 30%;
+   }
+   .box122>h2{
+    width:60%;
+    font-size: 12px;
+   }
+   /* -----------------------box2----------------------------------- */
+   .box1~h1{
+    width: 100%;
+    font-size: 14px;
+   text-align: left;
+   }
+   .line{
+    width: 20%;
+    margin-bottom: 10px;
+    border-top: 3px solid red;
+   }
+   .box2{
+    width: 100%;
+    display: flex;
+   }
+   .box2>h1{
+    width: 100%;
+    text-align: left;
+
+   }
+   .box21{
+    display: flex;
+   
+   }
+   .box21>div{
+    width: 25%;
+    text-align: left;
+    margin: 0 29px 0 0;
+    /* margin: auto; */
+   }
+   .box21>div>img{
+    width: 100%;
+    margin:15px 0 15px 0;
+   }
+   .box21>div>h3{
+    font-size: 14px;
+    margin:15px 0 15px 0;
+   }
+   .box21>div>p{
+    font-size: 12px;
+   }
+   
+/* --------------------------Footer-------------------------------- */
+.footer{
+    width: 100vw;
+    height: 180px;
+    margin-top: 20px;
+    background-color:rgb(211, 199, 199);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.google{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.google>input{
+    width: 50%;
+    height: 25px;
+}
+#srchBtn{
+    margin-top: 5px;
+}
+#srchBtn>i{
+   font-size: 10px;
+   padding: 4px;
+}
+.footerNav>ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px 15px 5px 15px;
+    
+}
+.footerNav>ul>li{
+    font-size: 12px;
+    font-weight: 600;
+    color: gray;
+    padding: 4px;
+}
+.copyright>p{
+    color: gray;
+}
+#srchBtn:hover{
+    background-color: black;
+    color: white;
+}
+/* ---------------------------dropdown-------------------------- */
+#dropDown>ul>li>a:hover >ul{
+    display: block;
+}
+/* --------------------------sidebar------------------------------- */
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100vw;
+    background-color: rgb(123, 119, 119);
+    overflow:auto;
+    z-index: 1;
+    display: none;
+    color: white;
+    border-radius: 10px;
+}
+.sidebar>img{
+    margin-top: 10px;
+    width: 90px;
+    position: sticky;
+    top:0px ;
+    
+}
+.sidebar>ul{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+.sidebar>ul>li{
+    width: 100%;
+    padding: 16px;
+    border: 1px solid white;
+}
+.sidebar>ul>li>a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    display: block;
+}
+.sidebar>ul>li:hover{
+    background-color: black;
+}
+.sidebar>ul>li>a:hover{
+    margin-left: 10px;
+}
+/* -----------------------------dropdown------------------------- */
+#dropDown>ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: gray;
+    display: none;
+}
+#dropDown>ul>li>a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    
+}
+#dropDown>ul>li{
+    padding: 8px;
+    border-bottom: 2px solid white;
+}
+#dropDown>ul>li:hover{
+   background-color: black;
+}
+</style>  
+
+<body>
+    <!-- ////////////////////////sidebar/////////////////////// -->
+
+    <div class="sidebar">
+        <img src="/deccan logo2.png" alt="">
+        <i style="float: right;" class="fa fa-arrow-circle-left" id="closeBtn"></i>
+        <ul>
+            <li><a href="/HOME.html">HOME</a></li>
+            <li><a href="#">Nation</a></li>
+            <li><a href="#">South</a></li>
+            <li><a href="#">World</a></li>
+            <li><a href="#">Entertainment</a></li>
+            <li><a href="#">Jobs & Education</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="/technology.html">Technology</a></li>
+            <li><a href="#">Lifestyle</a></li>
+            <li><a href="#">Gallery</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+    
+    <!-- //////////////////navbar////////////////////////////////// -->
+    <div id="container">
+    <div id="navbar">
+
+        <div class="left">
+
+        <i class="fa-solid fa-bars" id="openBtn"></i>
+        <!-- <span onclick="open()" id="open">open</span> -->
+
+        
+    <div class="mid">
+        <p class="first"><a href="http://epaper.deccanchronicle.com/states.aspx">e-Paper</a> </p>
+        <p class="second">Sunday Chronicle</p>
+    </div>
+
+    <div class="socialMedia">
+        <ul>
+       <li> <a href="https://www.facebook.com/deccannews/"><i class="fa-brands fa-facebook-f"></i></a> </li>
+      <li> <a href="https://twitter.com/DeccanChronicle?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"> <i class="fa-brands fa-twitter"></i></a> </li>
+      <li> <a href="https://www.instagram.com/accounts/login/?next=/deccanchronicle_official/"> <i class="fa-brands fa-instagram"></i></a> </li>
+      <li> <img src="/deccan logo.png" alt=""></li>
+    </ul>
+    </div>
+
+</div>
+
+    <div class="right">
+       <p class="rightFirst"> <input id="checkbox" type="checkbox">Auto Refresh </p>
+       <p>Corporate Insolvency Resolution Process</p>
+    </div>
+
+    </div>
+    <!--///////////////////////2nd Logo////////////////////////////  -->
+    <div class="container">
+        <!-- /////////////////////////////////////////////////////// -->
+    <div class="logo">
+        <img src="/deccan logo2.png" alt="">
+       <div class="overflow" style="width: 290px; overflow: hidden;"> <span class="date"></span></div>
+    </div>
+<!-- //////////////////////// 2nd Navbar////////////////////////////-->
+
+
+<div class="navbar2">
+    <ul>
+        <li><a href="/HOME.html">
+            <i class="fa fa-home"></i>
+        </a> </li>
+        <li>  <a href="#">
+            Nation
+         </a></li>
+        <li><a href="#">
+            South
+         </a></li>
+        <li><a href="#">World</a> </li>
+        <li><a href="#">Entertainment</a> </li>
+        <li><a href="#">Jobs & Education</a> 
+        </li>
+        <li><a href="#">Sports</a> </li>
+        <li><a href="/technology.html">Technology</a> </li>
+        <li><a href="#">Lifestyle</a> </li>
+        <li><a href="#">Gallery</a> </li>
+        <li id="dropDown">
+            <a href="#">
+               More....</a>
+               <!-- <i class="fa fa-angle-down"> -->
+                <ul>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Opinion</a></li>
+                    <li><a href="#">Sunday Chronicle</a></li>
+                    <li><a href="#">Featured</a></li>
+                    <li><a href="#">Hyderabad Chronicle</a></li>
+                    <li><a href="#">Science</a></li>
+                    <li><a href="#">Editor's Pic</a></li>
+                    <li><a href="#">Just In</a></li>
+                    <li><a href="#">Astroguide</a></li>
+                </ul>
+               <!-- </i> -->
+            
+        </li>
+    </ul>
+</div>
+<!-- //////////////////////////////////////Advertisement span///////// -->
+<!-- <div class="advertisement"></div> -->
+<!-- //////////////////////para/////////////////////////////////// -->
+<div class="pointer">
+    <a href="#">
+        <i class="fa fa-home"></i>
+    </a>
+    <a href="#">
+        <i class="fa fa-angle-double-right"></i>
+    </a>
+    <h1>Technology</h1>
+    <div class="line"></div>
+</div>
+
+<!-- /////////////////////////box1////////////////////////////// -->
+
+<div class="box1">
+    
+    <div class="box11">
+        <div class="box111">
+            <div class="box1111">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-v981omqo94ugmfqbfks9qgjt65-20220429104929.jpeg" alt="">
+                <h1>Musk sells $4B in Tesla shares, presumably for Twitter deal</h1>
+                <p>
+                    Most of the sales took place on Tuesday, when Tesla shares closed down 12%, a huge single-day drop 
+                </p>
+            </div>
+            <div class="box1111">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-blettn0hj8o3gok43isvb63oa4-20211001153058.jpeg" alt="">
+                <h1>Twitter, under shareholder pressure, begins deal talks with Musk</h1>
+                <p>Many Twitter shareholders reached out to the company after Musk outlined a detailed financing plan for his bid on Thursday</p>
+            </div>
+        </div>
+        <div class="box112">
+            <div class="box1121">
+                <img src="https://dc-cdn.s3-ap-southeast-1.amazonaws.com/dc-Cover-ofcq20cipn0iumjtnnm0igbui6-20160503111842.jpeg" alt="">
+                <h2>Beware of video calls from stranger, warn police</h2>
+            </div>
+            <div class="box1121">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-cnnfg8r1pgk0vrhks4836gvr84-20161205010512.jpeg" alt="">
+                <h2>Hyderabad police considering analyzers to catch drug users</h2>
+            </div>
+            <div class="box1121">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-au7mok02br0m258dgrfuqgmvt0-20200605122951.jpeg" alt="">
+                <h2>Musk reveals 9.2% stake in Twitter, shares surge 26%</h2>
+            </div>
+            <div class="box1121">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-63rrdhegqa9mhds521kr1ijab2-20220214091423.jpeg" alt="">
+                <h2>Firms produce RF systems and Electromechanical Actuators at ISRO’s in-house facility</h2>
+            </div>
+            <div class="box1121">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-1ja6hfgelvbp2uo3adtd0ns8e1-20220306114519.jpeg" alt="">
+                <h2>The Power of Social Media; A virtual weapon in modern warfare</h2>
+            </div>
+            <div class="box1121">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-h4s2a4nd45tttagk7ml09mvv24-20220304120102.jpeg" alt="">
+                <h2>HTC to launch new flagship Android phone in April</h2>
+            </div>
+            <div class="box1121">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-4v24huvehu1ggor0uk567vnju0-20210915072211.jpeg" alt="">
+                <h2>Instagram's standalone IGTV app officially discontinued</h2>
+            </div>
+            <div class="box1121">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-emce23hgls1m5vffdnc3h10eh7-20180404170000.jpeg" alt="">
+                <h2>Nokia C2 2nd edition with metal frame unveiled</h2>
+            </div>
+        </div>
+       <!-- <div class="box113"></div>  -->
+    </div>
+    <div class="box12">
+        <div class="box121"><img src="/googleAdTech.gif" alt="" style="width: 100%;"></div>
+        <!-- <span>TECH REVIEWS</span> -->
+        <div class="box122">
+        <h2>Audio-Technica ATH-CLR100BT: Best 'Big-Name’ budget ‘earphones!</h2>
+        <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-c6vcqtlfu5qn38at3rp993fd81-20200226145043.jpeg" alt="">
+        </div>
+        <div class="box122">
+        <h2>Realme C3 review: Premium performance, mind-blowing price!</h2>
+        <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-c6vcqtlfu5qn38at3rp993fd81-20200224061540.jpeg" alt="">
+        </div>
+        <div class="box122">
+        <h2>ColorOS 7 review: Slick, smooth and everything in between!</h2>
+        <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-c6vcqtlfu5qn38at3rp993fd81-20200223092702.jpeg" alt="">
+        </div>
+        <div class="box122">
+        <h2>Belkin RockStar headphones with Lightning review: A better Apple EarPods alternative!</h2>
+        <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-c6vcqtlfu5qn38at3rp993fd81-20200222092056.jpeg" alt="">
+        </div>
+        <div class="box122">
+        <h2>JVC HA-A10T review: Great fit, awesome sound, but that's it!</h2>
+        <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-c6vcqtlfu5qn38at3rp993fd81-20200221150312.jpeg" alt="">
+        </div>
+        <div class="box122">
+        <h2>Jabra Elite 75t review: An AirPods Pro killer!</h2>
+        <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-c6vcqtlfu5qn38at3rp993fd81-20200217120428.jpeg" alt="">
+        </div>
+    </div>
+</div>
+<!-- /////////////////////////mobiles & Tabs//////////////////// -->
+<h1>MOBILES AND TABS</h1>
+
+<!-- ////////////////////////////////////////// -->
+<div class="box2">
+<div class="box21">
+    <div>
+        <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-c6vcqtlfu5qn38at3rp993fd81-20200212065053.jpeg" alt="">
+        <h3>Samsung begins pre-booking Galaxy Z Flip in India; prices it just right</h3>
+        <p>HTC to launch new flagship Android phone in April</p>
+    </div>
+    <div>
+        <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-7sobhtv9ku0c13js07s0ea4571-20190907175410.jpeg" alt="">
+        <h3>Realme set to roll out new flagship smartphone in India on August 18</h3>
+        <p>Beware of video calls from stranger, warn police</p>
+    </div>
+    <div>
+        <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-8i6cov2nia0vn21ol6b5690i60-20220125133056.jpeg" alt="">
+        <h3>Google's Pixel 6a smartphone might launch in May</h3>
+        <p>Google Pixel 6, 6 Pro launch commercials leaked prior to official unveiling</p>
+    </div>
+</div>
+
+<div class="box22">
+    <p><img src="https://smejoinup.com/wp-content/uploads/2017/11/adwords-web-campaigns.gif" alt="" style="width: 100%;"></p>
+</div>
+</div>
+<!-- ////////////////////////////footer/////////////////////////// -->
+<div class="footer">
+    <div class="google">
+    <input type="text" id="search" placeholder="Google Search" value="">
+    <button id="srchBtn"> <i class="fa-solid fa-magnifying-glass">  Search</i>  </button>
+</div>
+
+    <div class="footerNav">
+        <ul>
+            <li>HOME</li>
+            <li>ASIAN AGE</li>
+            <li>ANDHRABHOOMI</li>
+            <li>FINANCIAL CHRONICLE</li>
+            <li>ABOUT US</li>
+            <li>CONTACT US</li>
+            <li>CLASSIFIEDS</li>
+            <li>BOOK CLASSIFIEDS</li>
+            <li>FEEDBACK</li>
+            <li>CAREERS</li>
+            <li><a href="http://epaper.deccanchronicle.com/states.aspx" style="text-decoration: none; color: gray;">E-PAPER</a> </li>
+            <li>PRIVACY POLICY</li>
+        </ul>
+
+        <div class="copyright">
+            <p>Copyright © 2015 - 2022 Deccan Chronicle.
+                Designed, Developed & Maintained By Daksham</p>
+        </div>
+    </div>
+</div>
+
+<!-- ///////////////////////////////////////////////////////////// -->
+</div>
+</div>
+</body>
+</html>
+<!-- --------------------------------------------------------------- -->
+<script>
+    setInterval(displayClock, 500);
+function displayClock(){
+const datePlace= document.querySelector(".date");
+let today = new(Date);
+let dd= today.getDate();
+let mm= today.getMonth()+1;
+let yyyy= today.getFullYear();
+let hour = today.getHours();
+let min = today.getMinutes();
+let sec = today.getSeconds();
+let prepand = (hour>=12)?"PM" : "AM";
+
+if (hour>12 ) {
+    hour = hour - 12 ;
+}else if (hour == 0) {
+    hour = 12 ;
+}
+
+
+if (hour<10){
+    hour = "0" + hour;
+}else{
+    hour = hour
+}
+
+if (min<10){
+    min = "0" + min;
+}else{
+    min = min
+}
+
+if (sec<10){
+    sec = "0" + sec;
+}else{
+    sec = sec
+}
+    
+if (mm<10){
+    mm = "0" + mm;
+}else{
+    mm = mm
+}
+if (dd<10){
+    dd = "0" + dd;
+}else{
+    dd = dd
+}
+
+datePlace.innerHTML = dd + "-" + mm + "-" + yyyy + " Last Update " + hour +":" +min +":" + sec + prepand;
+}
+
+displayClock();
+/////////////////////footer google search/////////////////////////////
+
+let searchBtn= document.querySelector("#srchBtn");
+let search= document.querySelector("#search");
+
+searchBtn.addEventListener("click", function(){
+    let url= 'https://www.google.com/search?q=' + search.value ;
+    window.open(url);
+})
+
+// ///////////////////////sidebar/////////////////////////////////////
+let btn2=document.querySelector("#openBtn");
+btn2.addEventListener("click",open);
+
+function open() {
+  document.querySelector(".sidebar").style.display = "inline-block";
+}
+
+let btn1=document.querySelector("#closeBtn");
+btn1.addEventListener("click",close);
+
+function close() {
+  document.querySelector(".sidebar").style.display="none";
+}
+// //////////////////////////dropdown//////////////////////////////
+let dropDown=document.querySelector("#dropDown");
+dropDown.addEventListener("mouseover",dropDownMenushow);
+dropDown.addEventListener("mouseout",dropDownMenuOff)
+
+function dropDownMenushow(){
+  let dropDown_ul= dropDown.querySelector("ul");
+  dropDown_ul.style.display="block";
+
+}
+function dropDownMenuOff(){
+    let dropDown_ul= dropDown.querySelector("ul");
+  dropDown_ul.style.display="none";
+}
+
+</script>

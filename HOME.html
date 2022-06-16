@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://kit.fontawesome.com/9a14a7de65.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans',sans-serif;
+    }
+    body{
+        width: 100vw;
+        text-align: center;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+    .container{
+        margin: auto;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #navbar{
+        width: 100%;
+        display: flex;
+        background-color: black;
+        color: white;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+        height: 50px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        position: sticky;
+        top: 0;
+    }
+    .mid{
+        display: flex;
+        margin: 0 38px 0 16px;
+    }
+    .mid>p>a{
+        color: white;
+        text-decoration: none;
+    }
+    .socialMedia>ul>li>a{
+        color: white;
+    }
+    .socialMedia>ul{
+        display: flex;
+        align-items: center;
+    }
+    .socialMedia>ul>li{
+        padding: 0 9px 0 9px;
+    }
+    .right{
+        display: flex;
+    }
+    .first{
+        border-right: 2px solid white;
+        padding-right: 5px;
+    }
+    .rightFirst{
+        border-right: 2px solid white;
+        padding-right: 6px;
+    }
+    .rightFirst+p{
+        margin-left: 6px;
+    }
+    .left{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .socialMedia>ul>li:hover{
+        cursor: pointer;
+    }
+    #checkbox:hover{
+        cursor: pointer;
+    }
+
+    #navbar>.left>i:hover{
+        cursor: pointer;
+    }
+    .first:hover{
+        cursor: pointer;
+    }
+    .second:hover{
+        cursor: pointer;
+    }
+    .socialMedia>ul>li>img{
+        display: flex;
+        justify-content: center;
+        width: 32px;
+    }
+    li{
+        list-style: none;
+        
+    }
+    i{
+        font-size: 26px;
+    }
+    /* ////////////////////////////logo//////////////////////// */
+    .logo{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 26px 0 26px 0;
+       border-bottom: 4px solid black;
+    }
+    .logo>span{
+        margin-top: 30px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    /* ////////////////////navbar2/////////////////////// */
+    .navbar2{
+        margin: auto;
+        /* margin-left: 134px; */
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid black;
+        margin-top: 12px;
+    }
+    .navbar2>ul{
+        display: flex;
+        align-items: center;
+    }
+    .navbar2>ul>li{
+        margin-bottom: 12px;
+    }
+    .navbar2>ul>li>a{
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        padding:12px;
+    }
+    .fa-angle-down{
+        font-size: 14px;
+    }
+    /* ----------------------advertisement----------------------- */
+    .advertisement{
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .advertisement>img{
+        width: 100%;
+    }
+    .advertisement>img {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 3;
+}
+.box121>img{
+    width: 100%;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+    /* -------------------date---------------------------------- */
+    .date{
+    color:black;
+    width: 30vw;
+    height: 44px;
+    
+}
+    /* ------------------pointer-------------------------------- */
+    .pointer{
+        width: 100%;
+        text-align: left;
+        margin: auto;
+    }
+    .pointer>a>i{
+        color: black;
+        font-size: 15px;
+    }
+    /* ---------------------------h1-------------------------- */
+    .pointer>h1{
+        width: 100%;
+        font-size: 16px;
+        text-align: left;
+        font-weight: 600;
+    }
+    /* ---------------------BOX1----------------------------- */
+   .box1{
+    width: 100%;
+    display: flex;
+    
+   }
+   .box11{
+    width: 70%;
+    display: flex;
+   }
+   .box12{
+    width: 30%;
+   }
+   .box111{
+    width:  70%;
+    text-align: left;
+   }
+   .box112{
+    width: 30%;
+    padding-left: 10px;
+   }
+   .box113{
+    width: 100%;
+   }
+   .box1111{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 5px;
+   }
+   .box1121{
+ width: 99%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 5px;
+   }
+   .box1121:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+   }
+   .box121{
+    width: 95%;
+    text-align: center;
+    margin: auto;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 5px;
+   }
+   .box122{
+width: 90%;
+display: flex;
+justify-content: space-between;
+text-align: left;
+margin:15px 0 15px 0;
+box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+   }
+   .box123>img{
+    width: 30%;
+   }
+   .box1230>h2{
+    width:100%;
+    font-size: 12px;
+   }
+   .box1230>p{
+    font-size: 10px;
+    width: 100%;
+   }
+   .box1230{
+width: 60%;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+text-align: left;
+/* margin:15px 0 15px 0; */
+box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+   }
+   .box123{
+width: 100%;
+display: flex;
+justify-content: space-between;
+text-align: left;
+margin:15px 0 15px 0;
+box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 5px;
+   }
+   /* ------------------------------------------------------- */
+   .box1111>img{
+    width: 100%;
+   }
+   .box1111>h1{
+    font-size: 18px;
+    padding: 4px;
+   }
+   .box1111>p{
+    font-size: 16px;
+    padding: 4px;
+   }
+   .box1121>img{
+   padding: 10px;
+    width: 40%;
+   }
+   .box1121>h2{
+    text-align: left;
+    width: 60%;
+    font-size: 10px;
+   }
+   .box121{
+    width: 90%;
+    height: 220px;
+    
+   }
+   .box122:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+   }
+   .box122>img{
+    width: 30%;
+    padding: 4px 0 4px 0;
+   }
+   .box122>h2{
+    width:60%;
+    font-size: 12px;
+    padding: 4px 0 4px 4px;
+   }
+   .box1220{
+    background-color: rgb(230, 224, 224);
+    margin: 20px 0 20px 0;
+   }
+   /* -----------------------box2----------------------------------- */
+   .box1~h1{
+    width: 100%;
+    font-size: 14px;
+   text-align: left;
+   }
+   .line{
+    width: 20%;
+    margin-bottom: 10px;
+    border-top: 3px solid red;
+   }
+   .box2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   }
+   .box2>h1{
+    width: 100%;
+    text-align: left;
+
+   }
+   .box21{
+    display: flex;
+    background-color: rgb(248, 243, 243);
+   }
+   .box21>div{
+    width: 25%;
+    text-align: left;
+    margin: 0 29px 0 0;
+    /* margin: auto; */
+   }
+   .box21>div>img{
+    height: 220px;
+    width: 100%;
+    margin:15px 0 15px 0;
+   }
+   .box21>div>img:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   }
+   .box21>div>h3{
+    font-size: 14px;
+    margin:15px 0 15px 0;
+   }
+   .box21>div>p{
+    font-size: 12px;
+   }
+   .box23{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(248, 243, 243);
+   }
+   .box23>div{
+    width: 25%;
+    text-align: left;
+    margin: 0 29px 0 0;
+    /* margin: auto; */
+   }
+   .box23>div>img{
+    margin: auto;
+    height: 220px;
+    width: 100%;
+    margin:15px 0 15px 0;
+   }
+   .box23>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+   }
+   .box23>div>h2{
+    font-size: 14px;
+    margin:15px 0 15px 0;
+   }
+   
+/* --------------------------Footer-------------------------------- */
+.footer{
+    width: 100vw;
+    height: 180px;
+    margin-top: 20px;
+    background-color:rgb(211, 199, 199);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.google{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.google>input{
+    width: 50%;
+    height: 25px;
+}
+#srchBtn{
+    margin-top: 5px;
+}
+#srchBtn>i{
+   font-size: 10px;
+   padding: 4px;
+}
+.footerNav>ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px 15px 5px 15px;
+    
+}
+.footerNav>ul>li{
+    font-size: 12px;
+    font-weight: 600;
+    color: gray;
+    padding: 4px;
+}
+.copyright>p{
+    color: gray;
+}
+#srchBtn:hover{
+    background-color: black;
+    color: white;
+}
+/* ---------------------------dropdown-------------------------- */
+
+#dropDown>ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: gray;
+    display: none;
+}
+#dropDown>ul>li>a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    
+}
+#dropDown>ul>li{
+    padding: 8px;
+    border-bottom: 2px solid white;
+}
+#dropDown>ul>li:hover{
+    background-color: black;
+}
+/* ----------------------------sidebar--------------------------- */
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100vw;
+    background-color: rgb(123, 119, 119);
+    overflow:auto;
+    z-index: 1;
+    display: none;
+    color: white;
+}
+.sidebar>img{
+    margin-top: 10px;
+    width: 90px;
+    position: sticky;
+    top:0px ;
+    
+}
+.sidebar>ul{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+.sidebar>ul>li{
+    width: 100%;
+    padding: 16px;
+    border: 1px solid white;
+}
+.sidebar>ul>li>a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    display: block;
+}
+.sidebar>ul>li:hover{
+    background-color: black;
+}
+.sidebar>ul>li>a:hover{
+    margin-left: 10px;
+}
+/* ----------------------------media query------------------------ */
+
+
+</style>
+
+<body>
+
+    
+
+    <!-- //////////////////navbar////////////////////////////////// -->
+    <div class="sidebar">
+        <img src="/deccan logo2.png" alt="">
+        <i style="float: right;" class="fa fa-arrow-circle-left" id="closeBtn"></i>
+        <ul>
+            <li><a href="/HOME.html">HOME</a></li>
+            <li><a href="#">Nation</a></li>
+            <li><a href="#">South</a></li>
+            <li><a href="#">World</a></li>
+            <li><a href="#">Entertainment</a></li>
+            <li><a href="#">Jobs & Education</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="/technology.html">Technology</a></li>
+            <li><a href="#">Lifestyle</a></li>
+            <li><a href="#">Gallery</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="navbar">
+
+        <div class="left">
+
+        <i class="fa-solid fa-bars" id="open"></i>
+        
+    <div class="mid">
+        <p class="first"><a href="http://epaper.deccanchronicle.com/states.aspx" style="text-decoration: none; color: white;">  e-Paper</a></p>
+        <p class="second">Sunday Chronicle</p>
+    </div>
+
+    <div class="socialMedia">
+        <ul>
+            <li> <a href="https://www.facebook.com/deccannews/"><i class="fa-brands fa-facebook-f"></i></a> </li>
+            <li> <a href="https://twitter.com/DeccanChronicle?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"> <i class="fa-brands fa-twitter"></i></a> </li>
+            <li> <a href="https://www.instagram.com/accounts/login/?next=/deccanchronicle_official/"> <i class="fa-brands fa-instagram"></i></a> </li>
+            <li> <img src="/deccan logo.png" alt=""></li>
+    </ul>
+    </div>
+
+</div>
+
+    <div class="right">
+       <p class="rightFirst"> <input id="checkbox" type="checkbox">Auto Refresh </p>
+       <p>Corporate Insolvency Resolution Process</p>
+    </div>
+
+    </div>
+    <!--///////////////////////2nd Logo////////////////////////////  -->
+    <div class="container">
+        <!-- /////////////////////////////////////////////////////// -->
+    <div class="logo">
+        <img src="/deccan logo2.png" alt="">
+        <span class="date">
+            <div class="date"></div>
+        </span>
+    </div>
+<!-- //////////////////////// 2nd Navbar////////////////////////////-->
+
+
+<div class="navbar2">
+    <ul>
+        <li><a href="/HOME.html">
+            <i class="fa fa-home"></i>
+        </a> </li>
+        <li>  <a href="#">
+            Nation
+         </a></li>
+        <li><a href="#">
+            South
+         </a></li>
+        <li><a href="#">World</a> </li>
+        <li><a href="#">Entertainment</a> </li>
+        <li><a href="#">Jobs & Education</a> 
+        </li>
+        <li><a href="#">Sports</a> </li>
+        <li><a href="/technology.html">Technology</a> </li>
+        <li><a href="#">Lifestyle</a> </li>
+        <li><a href="#">Gallery</a> </li>
+        <li id="dropDown">
+            <a href="#">
+               More....</a>
+               <!-- <i class="fa fa-angle-down"> -->
+                <ul>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Opinion</a></li>
+                    <li><a href="#">Sunday Chronicle</a></li>
+                    <li><a href="#">Featured</a></li>
+                    <li><a href="#">Hyderabad Chronicle</a></li>
+                    <li><a href="#">Science</a></li>
+                    <li><a href="#">Editor's Pic</a></li>
+                    <li><a href="#">Just In</a></li>
+                    <li><a href="#">Astroguide</a></li>
+                </ul>
+               <!-- </i> -->
+            
+        </li>
+    </ul>
+</div>
+<!-- //////////////////////////////////////Advertisement span///////// -->
+<div class="advertisement">
+    <img src="/google ad.gif" alt="">
+</div>
+<!-- //////////////////////para/////////////////////////////////// -->
+<div class="pointer">
+    <!-- <a href="#">
+        <i class="fa fa-home"></i>
+    </a>
+    <a href="#">
+        <i class="fa fa-angle-double-right"></i>
+    </a> -->
+    <h1>TOP STORIES</h1>
+    <div class="line"></div>
+</div>
+
+<!-- /////////////////////////box1////////////////////////////// -->
+
+<div class="box1">
+    
+    <div class="box11">
+        <div class="box111"></div>
+
+        <div class="box112"></div>
+       <!-- <div class="box113"></div>  -->
+    </div>
+    <div class="box12">
+        <div class="box121" style="color: grey;"><img src="https://www.godfrey.com/-/media/godfrey/insights/seo/6-tricks-to-improve-your-google-ads/mb-6-quick-tips-googleads-fa-p1_4.gif?la=en&&hasB74D3C53299C275B52E16F9D1970224A6E4" alt="" style="height: 220px;"> </div>
+        <!-- <span>TECH REVIEWS</span> -->
+        
+        <div class="box1220"><h2 style="border-bottom:3px solid red; font-size: 14px;" >MOST POPULAR</h2></div>
+        <h2 style="border-bottom: 3px solid red; font-size: 14px; margin: 10px 0 2px 0;">COLUMNS</h2>
+       </div>
+</div>
+<!-- /////////////////////////mobiles & Tabs//////////////////// -->
+<h1 style="border-bottom: 3px solid red; margin:20px 0 20px 0; ">CARTOON OF THE DAY</h1>
+
+<!-- ////////////////////////////////////////// -->
+<div class="box2">
+<div class="box21"></div>
+
+<!-- <div class="box22">
+    <p>ADVERTISEMENT</p>
+</div> -->
+<h1 style="border-bottom: 3px solid red; font-size: 14px; margin:20px 0 20px 0;">EDITOR'S PICS</h1>
+<div class="box23"></div>
+</div>
+<!-- ////////////////////////////footer/////////////////////////// -->
+<div class="footer">
+    <div class="google">
+    <input type="text" id="search" placeholder="Google Search" value="">
+    <button id="srchBtn"> <i class="fa-solid fa-magnifying-glass">  Search</i>  </button>
+</div>
+
+    <div class="footerNav">
+        <ul>
+            <li>HOME</li>
+            <li>ASIAN AGE</li>
+            <li>ANDHRABHOOMI</li>
+            <li>FINANCIAL CHRONICLE</li>
+            <li>ABOUT US</li>
+            <li><a style="text-decoration: none; color: grey;" href="https://www.deccanchronicle.com/contact-us">CONTACT US</a> </li>
+            <li>CLASSIFIEDS</li>
+            <li>BOOK CLASSIFIEDS</li>
+            <li>FEEDBACK</li>
+            <li>CAREERS</li>
+            <li><a style="text-decoration: none; color: grey;" href="http://epaper.deccanchronicle.com/states.aspx">E-PAPER</a> </li>
+            <li>PRIVACY POLICY</li>
+        </ul>
+
+        <div class="copyright">
+            <p>Copyright © 2015 - 2022 Deccan Chronicle.
+                Designed, Developed & Maintained By Daksham</p>
+        </div>
+    </div>
+</div>
+
+<!-- ///////////////////////////////////////////////////////////// -->
+</div>
+</body>
+</html>
+<!-- --------------------------------------------------------------- -->
+<script>
+    setInterval(displayClock, 500);
+function displayClock(){
+const datePlace= document.querySelector(".date");
+let today = new(Date);
+let dd= today.getDate();
+let mm= today.getMonth()+1;
+let yyyy= today.getFullYear();
+let hour = today.getHours();
+let min = today.getMinutes();
+let sec = today.getSeconds();
+let prepand = (hour>=12)?"PM" : "AM";
+
+if (hour>12 ) {
+    hour = hour - 12 ;
+}else if (hour == 0) {
+    hour = 12 ;
+}
+
+
+if (hour<10){
+    hour = "0" + hour;
+}else{
+    hour = hour
+}
+
+if (min<10){
+    min = "0" + min;
+}else{
+    min = min
+}
+
+if (sec<10){
+    sec = "0" + sec;
+}else{
+    sec = sec
+}
+    
+if (mm<10){
+    mm = "0" + mm;
+}else{
+    mm = mm
+}
+if (dd<10){
+    dd = "0" + dd;
+}else{
+    dd = dd
+}
+
+datePlace.innerHTML = dd + "-" + mm + "-" + yyyy + " Last Update " + hour +":" +min +":" + sec + prepand;
+}
+
+displayClock();
+/////////////////////footer google search/////////////////////////////
+
+
+// ///////////////////pushing data using objects////////////////////////
+
+let obj1111=[
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-arl7d0smrqvhqkm1f7thq63243-20220211233330.jpeg", head:"Presidential election: TRS to stay off Mamata meet", para:"The party said it wanted to be equidistant from the Congress and the BJP, and was skipping the meeting as the Congress would be present "},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-qpo6jc16mb3inb5ieefq2rdn24-20220615122629.jpeg", head:"Police assault minor girl's father, likely to get suspended", para:"SI Srinivas allegedly colluded with a local TRS corporator and assaulted the man for withdrawing the complaint "},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-qpo6jc16mb3inb5ieefq2rdn24-20220615111610.jpeg", head:"Cracks in Mamata Banerjee-led 'opposition meet' for Presidential polls", para:"The leaders who would likely to take part in the meeting include HD Deve Gowda, HD Kumaraswamy and Mehbooba Mufti "},
+];
+
+obj1111.forEach(function(elem){
+    let box1111_div=document.createElement("div");
+    box1111_div.classList.add("box1111");
+
+   
+
+    let avatar=document.createElement("img");
+    avatar.setAttribute("src", elem.img_url);
+
+    let h1=document.createElement("h1");
+    h1.innerText=elem.head;
+
+    let p=document.createElement("p");
+    p.innerText=elem.para;
+
+    box1111_div.append(avatar,h1,p)
+    document.querySelector(".box111").append(box1111_div);
+})
+
+
+
+let obj1121=[
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-s702pclqh4p3l96s4vq358jct0-20220518215054.jpeg", head:"KCR prepares PPT to explain his bigger role to TRS leaders, cadres", },
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-tfvvjg605k774cc039o1ho82t5-20220615012645.jpeg", head:"Telugu subject compulsory for class 1 to 10 of CBSE, ICSE, IB schools in Telangana"},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-tfvvjg605k774cc039o1ho82t5-20220615012645.jpeg", head:"CM Jagan hits back at TD, Jana Sena over attempts to defame govt"},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-u0dgf7119aqkh85ur18ss9mjv3-20220608071649.jpeg", head:"PM Modi to address public meeting in Hyderabad on July 3"},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-qpo6jc16mb3inb5ieefq2rdn24-20220615135516.jpeg", head:"Government blocking political activities, will face consequences: Congress"},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-vvamu62i56hm41i9huubaolko5-20220428004006.jpeg", head:"Government will create 10 lakh jobs in next 18 months"},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-iss492mpkj8bbr8fg1dsq0e9a1-20170821130656.jpeg", head:"Cabinet gives nod for 5G auctions; 72097.8 MHz spectrum to be put on block by July"},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-tfvvjg605k774cc039o1ho82t5-20220614215904.jpeg", head:"Government unveils Agnipath, radical new plan to recruit youths to armed forces"},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-303to240pjmrk0224k3l70sc26-20161107140431.jpeg", head:"Telangana: Plans afoot to make suspended officers work for half salary"},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-nukrp6jvs1g8udn2eeek688cr1-20220614232124.jpeg", head:"Nala works yet to complete, Hyderabad stares at yet another deluge"},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-qpo6jc16mb3inb5ieefq2rdn24-20220615105831.jpeg", head:"Counting of votes underway for Karnataka MLC polls"},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-ccgdrbu5lkqecfgn344l9qiek2-20190813063529.jpeg", head:"Hyderabad gangrape: Five-day grilling of accused ends"},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-nhilk1afbebublj00q3lm02fu0-20180919170119.jpeg", head:"Centre metes out 'selective punishment' to Muslims, says Asaduddin Owaisi"},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-qij0dv646q17d1to9jsurtcv71-20220505070448.jpeg", head:"IMD forecasts heavy rains  as monsoon sets over Telangana"},
+];
+
+obj1121.forEach(function(elem){
+
+    let box1121_div=document.createElement("div");
+    box1121_div.classList.add("box1121");
+
+    let avatar=document.createElement("img");
+    avatar.setAttribute("src", elem.img_url);
+
+    let h2=document.createElement("h2");
+    h2.innerText=elem.head;
+
+    box1121_div.append(avatar,h2);
+    document.querySelector(".box112").append(box1121_div);
+})
+
+
+let obj122=[
+    {head:"Govt schools across TS in dire straits, poor infra hampering quality education",img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-0k9bpt67qg7uuq8cvcj5krvto0-20220613090900.jpeg"},
+    {head:"World's largest cricket jersey was made within nine days",img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-b5nq5e0ku3g1nctek2tkqtah67-20220601160558.jpeg"},
+    {head:"Viral fever with gastro, dengue cases increase in Hyderabad",img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-efb18qerodo9jp7egg2v41otq4-20210607215443.jpeg"},
+    {head:"AP man donates his retirement funds for SSY scheme, gets PM Modi's pat",img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-affitcqkm355isuv1pg8jsobg2-20220530033206.jpeg"},
+    {head:"Low blow for alcohol lovers as liquor prices go higher in Telangana",img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-gh6knkudub2ksq1v7mg76isbi6-20170710011908.jpeg"},
+    {head:"Nation's envy: TS legislators are highest paid in the country",img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-0fr7ofu4cef9a2dbis2tuej3p1-20161209024602.jpeg"},
+];
+
+obj122.forEach(function(elem){
+    
+    
+    let box122_div=document.createElement("div");
+    box122_div.classList.add("box122");
+
+    let h2=document.createElement("h2");
+    h2.innerText=elem.head;
+
+    let avatar=document.createElement("img");
+    avatar.setAttribute("src",elem.img_url);
+
+    box122_div.append(h2,avatar);
+   
+    document.querySelector(".box1220").append(box122_div);
+})
+
+let obj123=[
+    {head:"Anand K. Sahay | Will Modi’s balancing act work as world eyes India?", para:"The Nupur Sharma affair stinks, and the handling of the matter by the BJP and the Narendra Modi government is less than edifying", img_url:"https://dc-cdn.s3-ap-southeast-1.amazonaws.com/5594bfe13f17c5ce47707d21e1011f6ce0908258-tc-img-columnists.jpg"},
+    {head:"Dilip Cherian | Centre eases off on changes in IAS cadre service rules", para:"In 2021, only 10 per cent of mid-level IAS officers were posted with the Union government, a sharp dip from 19 per cent in 2014", img_url:"https://dc-cdn.s3-ap-southeast-1.amazonaws.com/2ef59cdce7be3b73484cd7776eecee679d2f5c96-tc-img-columnists.jpg"},
+    {head:"India-UK ties at 75: Looking back, moving forward", para:"A mutually beneficial knowledge-intensive partnership between India and UK is the next gear both countries should be accelerating", img_url:"https://www.deccanchronicle.com/images/mugShot.jpeg"},
+];
+
+obj123.forEach(function(elem){
+    let box1230_div=document.createElement("div");
+    box1230_div.classList.add("box1230");
+
+
+    let box123_div=document.createElement("div");
+    box123_div.classList.add("box123");
+
+    let h2=document.createElement("h2");
+    h2.innerText=elem.head;
+
+    let p=document.createElement("p");
+    p.innerText=elem.para;
+
+    let avatar=document.createElement("img");
+    avatar.setAttribute("src", elem.img_url);
+
+    
+    box1230_div.append(h2,p)
+    box123_div.append(box1230_div,avatar);
+    document.querySelector(".box12").append(box123_div);
+})
+
+let obj21=[
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/14d64906264ee7d4b85c5e28e43757564b2160d3-tc-img-web.jpg"},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/2719dbcadec930b2bc54462ad717c3cb2dc4922f-tc-img-web.jpg"
+    },
+    {img_url:"https://static01.nyt.com/images/2012/05/16/world/asia/16-Mamata-Surendra-IndiaInk/16-Mamata-Surendra-IndiaInk-blog480.jpg"},
+    {img_url:"https://assets.thehansindia.com/h-upload/2021/02/19/1032399-petrol.jpg"}
+];
+
+obj21.forEach(function(elem){
+    let div=document.createElement("div");
+
+    let avatar=document.createElement("img");
+    avatar.setAttribute("src", elem.img_url);
+
+    div.append(avatar);
+    document.querySelector(".box21").append(div);
+})
+
+let obj23=[
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-0k9bpt67qg7uuq8cvcj5krvto0-20220613090900.jpeg", head:"Govt schools across TS in dire straits, poor infra hampering quality education "},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-fophas0d0l9fu3em84somap0n1-20180419062047.jpeg", head:"12-yr-old girl flees after forcible marriage to 35-year-old uncle in TS "},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-jo4gv47qlta9dm26aflc6le3i4-20180816125314.jpeg", head:"Experts for study on bee population "},
+    {img_url:"https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-tjbmaee6vvttimvhi4drslcvs0-20220503005019.jpeg", head:"Report: India might turn zoonotic disease hotspot "},
+];
+
+obj23.forEach(function(elem){
+    let div=document.createElement("div");
+    // box23_div.classList.add("box23");
+
+    let avatar=document.createElement("img");
+    avatar.setAttribute("src",elem.img_url);
+
+    let h2=document.createElement("h2");
+    h2.innerText=elem.head;
+
+    div.append(avatar,h2);
+    document.querySelector(".box23").append(div);
+})
+
+
+// //////////////////////sidebar//////////////////////////////////
+let btn2=document.querySelector("#open");
+btn2.addEventListener("click",open);
+
+function open() {
+  document.querySelector(".sidebar").style.display = "inline-block";
+}
+
+let btn1=document.querySelector("#closeBtn");
+btn1.addEventListener("click",close);
+
+function close() {
+  document.querySelector(".sidebar").style.display="none";
+}
+
+// ////////////////////////////dropdown//////////////////////
+let dropDown=document.querySelector("#dropDown");
+dropDown.addEventListener("mouseover",dropDownMenushow);
+dropDown.addEventListener("mouseout",dropDownMenuOff)
+
+function dropDownMenushow(){
+  let dropDown_ul= dropDown.querySelector("ul");
+  dropDown_ul.style.display="block";
+
+}
+function dropDownMenuOff(){
+    let dropDown_ul= dropDown.querySelector("ul");
+  dropDown_ul.style.display="none";
+}
+// ///////////////////////////search//////////////////////////////
+let searchBtn= document.querySelector("#srchBtn");
+let search= document.querySelector("#search");
+
+searchBtn.addEventListener("click", searchFun)
+
+function searchFun(){
+    let url= 'https://www.google.com/search?q=' + search.value ;
+    window.open(url);
+}
+
+</script>
