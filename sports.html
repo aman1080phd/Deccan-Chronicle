@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
+
+        *{
+            margin: 0;
+        }
        #main{
             
             height: auto;
@@ -286,17 +290,17 @@
 
         <i class="fa-solid fa-bars"></i>
         
-    <div class="mid">
-        <p class="first">e-Paper</p>
-        <p class="second">Sunday Chronicle</p>
-    </div>
+        <div class="mid">
+            <p class="first"><a href="http://epaper.deccanchronicle.com/states.aspx" style="text-decoration: none; color: white;">  e-Paper</a></p>
+            <p class="second">Sunday Chronicle</p>
+        </div>
 
     <div class="socialMedia">
         <ul>
-       <li> <i class="fa-brands fa-facebook-f"></i> </li>
-      <li>  <i class="fa-brands fa-twitter"></i> </li>
-      <li>  <i class="fa-brands fa-instagram"></i> </li>
-      <li> <img src="https://www.deccanchronicle.com/images/app_store_iconWhite.png" alt=""></li>
+            <li> <a href="https://www.facebook.com/deccannews/"><i class="fa-brands fa-facebook-f"></i></a> </li>
+            <li> <a href="https://twitter.com/DeccanChronicle?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"> <i class="fa-brands fa-twitter"></i></a> </li>
+            <li> <a href="https://www.instagram.com/accounts/login/?next=/deccanchronicle_official/"> <i class="fa-brands fa-instagram"></i></a> </li>
+            <li> <img src="/deccan logo.png" alt=""></li>
     </ul>
     </div>
 
@@ -322,30 +326,45 @@
 
 <div class="navbar2">
     <ul>
-        <li><a href="">
+        <li><a href="/index.html">
             <i class="fa fa-home"></i>
         </a> </li>
-        <li>  <a href="#">
+        <li>  <a href="/Nation.html">
             Nation
          </a></li>
-        <li><a href="#">
+        <li><a href="/South.html">
             South
          </a></li>
         <li><a href="#">World</a> </li>
         <li><a href="#">Entertainment</a> </li>
-        <li><a href="Job&Education.html">Jobs & Education</a> 
+        <li><a href="/Job&Education.html">Jobs & Education</a> 
         </li>
-        <li><a href="sports.html">Sports</a> </li>
-        <li><a href="#">Technology</a> </li>
-        <li><a href="#">Lifestyle</a> </li>
-        <li><a href="#">Gallery</a> </li>
-        <li>
+        <li><a href="/sports.html">Sports</a> </li>
+        <li><a href="/technology.html">Technology</a> </li>
+        <li><a href="/lifeStyle.html">Lifestyle</a> </li>
+        <li><a href="/Gallery.html">Gallery</a> </li>
+        <li id="dropDown">
             <a href="#">
-               More.... <i class="fa fa-angle-down"></i>
-            </a>
+               More....<i class="fa fa-angle-down"></i></a>
+                <ul>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Opinion</a></li>
+                    <li><a href="#">Sunday Chronicle</a></li>
+                    <li><a href="#">Featured</a></li>
+                    <li><a href="#">Hyderabad Chronicle</a></li>
+                    <li><a href="#">Science</a></li>
+                    <li><a href="#">Editor's Pic</a></li>
+                    <li><a href="#">Just In</a></li>
+                    <li><a href="#">Astroguide</a></li>
+                </ul>
+               <!-- </i> -->
+            
         </li>
     </ul>
 </div>
+
+
+
 
 
     <!-- Main Body -->
@@ -730,5 +749,17 @@ datePlace.innerHTML = dd + "-" + mm + "-" + yyyy + " Last Update " + hour +":" +
 displayClock();
 /////////////////////////////////////////////////////////////////
 
+let dropDown=document.querySelector("#dropDown");
+dropDown.addEventListener("mouseover",dropDownMenushow);
+dropDown.addEventListener("mouseout",dropDownMenuOff)
 
+function dropDownMenushow(){
+  let dropDown_ul= dropDown.querySelector("ul");
+  dropDown_ul.style.display="block";
+
+}
+function dropDownMenuOff(){
+    let dropDown_ul= dropDown.querySelector("ul");
+  dropDown_ul.style.display="none";
+}
 </script>

@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
+        *{
+            margin: 0;
+        }
         #main{
             /* border: 1px solid; */
             height: auto;
@@ -282,6 +285,7 @@
     </style>
 </head>
 <body>
+    <!-- ----------------------------------header------------------------------- -->
     <div id="navbar">
 
         <div class="left">
@@ -324,31 +328,44 @@
 
 <div class="navbar2">
     <ul>
-        <li><a href="">
+        <li><a href="/index.html">
             <i class="fa fa-home"></i>
         </a> </li>
-        <li>  <a href="#">
+        <li>  <a href="/Nation.html">
             Nation
          </a></li>
-        <li><a href="#">
+        <li><a href="/South.html">
             South
          </a></li>
         <li><a href="#">World</a> </li>
         <li><a href="#">Entertainment</a> </li>
-        <li><a href="Job&Education.html">Jobs & Education</a> 
+        <li><a href="/Job&Education.html">Jobs & Education</a> 
         </li>
-        <li><a href="sports.html">Sports</a> </li>
-        <li><a href="#">Technology</a> </li>
-        <li><a href="#">Lifestyle</a> </li>
-        <li><a href="#">Gallery</a> </li>
-        <li>
+        <li><a href="/sports.html">Sports</a> </li>
+        <li><a href="/technology.html">Technology</a> </li>
+        <li><a href="/lifeStyle.html">Lifestyle</a> </li>
+        <li><a href="/Gallery.html">Gallery</a> </li>
+        <li id="dropDown">
             <a href="#">
-               More.... <i class="fa fa-angle-down"></i>
-            </a>
+               More....<i class="fa fa-angle-down"></i></a>
+                <ul>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Opinion</a></li>
+                    <li><a href="#">Sunday Chronicle</a></li>
+                    <li><a href="#">Featured</a></li>
+                    <li><a href="#">Hyderabad Chronicle</a></li>
+                    <li><a href="#">Science</a></li>
+                    <li><a href="#">Editor's Pic</a></li>
+                    <li><a href="#">Just In</a></li>
+                    <li><a href="#">Astroguide</a></li>
+                </ul>
+               <!-- </i> -->
+            
         </li>
     </ul>
 </div>
 
+<!-- -------------------------------------------------------------------------- -->
     <!-- main body -->
     <div id="main">
         <div id="job">
@@ -692,7 +709,19 @@ datePlace.innerHTML = dd + "-" + mm + "-" + yyyy + " Last Update " + hour +":" +
 }
 
 displayClock();
-/////////////////////////////////////////////////////////////////
+/////////////////////////////dropdown////////////////////////////////////////
+let dropDown=document.querySelector("#dropDown");
+dropDown.addEventListener("mouseover",dropDownMenushow);
+dropDown.addEventListener("mouseout",dropDownMenuOff)
 
+function dropDownMenushow(){
+  let dropDown_ul= dropDown.querySelector("ul");
+  dropDown_ul.style.display="block";
+
+}
+function dropDownMenuOff(){
+    let dropDown_ul= dropDown.querySelector("ul");
+  dropDown_ul.style.display="none";
+}
 
 </script>

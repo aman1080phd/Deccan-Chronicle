@@ -1,8 +1,46 @@
+.mid{
+    display: flex;
+    margin: 0 38px 0 16px;
+}
+.mid>p>a{
+    color: white;
+    text-decoration: none;
+}
+
+.socialMedia>ul>li>a{
+    color: white;
+}
+.socialMedia>ul{
+    display: flex;
+    align-items: center;
+}
+.socialMedia>ul>li{
+    padding: 0 9px 0 9px;
+}
+#dropDown>ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: gray;
+    display: none;
+}
+#dropDown>ul>li>a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    
+}
+#dropDown>ul>li{
+    padding: 8px;
+    /* border-bottom: 2px solid white; */
+}
+#dropDown>ul>li:hover{
+    background-color: black;
+}
+/* ---------------------------------------------------------------- */
 .footer{
-    width: 100%;
+    width: 100vw;
     height: 180px;
-    margin-top: 20px;
-    margin-bottom: 30px;
     background-color:rgb(211, 199, 199);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 20px;

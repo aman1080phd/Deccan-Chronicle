@@ -5,23 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DECCAN CHRONICAL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
     <style>
         *{
-            margin: 0;
-            padding: 0%;
-        }
-
-
-        .container{
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans',sans-serif;
+    }
+    body{
+        width: 100vw;
+        text-align: center;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container{
         margin: auto;
         width: 80%;
-        /* display: flex; */
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
-        #navbar{
+    #navbar{
         width: 100%;
         display: flex;
         background-color: black;
@@ -136,20 +145,7 @@
     .fa-angle-down{
         font-size: 14px;
     }
-    /* ----------------------advertisement----------------------- */
-    .advertisement{
-        margin-top: 20px;
-        width: 100%;
-        height: 160px;
-        border: 1px solid black;
-    }
-    /* -------------------date---------------------------------- */
-    .date{
-    color:black;
-    width: 30vw;
-    height: 44px;
-}
-
+   
 
 
         h3{
@@ -251,13 +247,14 @@
 
 
         .footer{
-    width: 100%;
+            margin-left: -11vw;
+    width: 100vw;
     height: 200px;
     margin-top: 20px;
-    margin-bottom: 30px;
     background-color:rgb(211, 199, 199);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 20px;
+    overflow-x: hidden;
 }
 .google{
     display: flex;
@@ -352,10 +349,29 @@
             padding: 10px;
         }
 
-      
+      /* --------------------------------dropdown------------------------------------- */
+      #dropDown>ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: gray;
+    display: none;
+}
+#dropDown>ul>li>a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    
+}
+#dropDown>ul>li{
+    padding: 8px;
+    border-bottom: 2px solid white;
+}
+#dropDown>ul>li:hover{
+    background-color: black;
+}
   
     </style>
-</head>
 <body>
    
 
@@ -401,32 +417,44 @@
 
 <div class="navbar2">
     <ul>
-        <li><a href="">
+        <li><a href="/index.html">
             <i class="fa fa-home"></i>
         </a> </li>
-        <li>  <a href="#">
+        <li>  <a href="/Nation.html">
             Nation
          </a></li>
-        <li><a href="#">
+        <li><a href="/South.html">
             South
          </a></li>
         <li><a href="#">World</a> </li>
         <li><a href="#">Entertainment</a> </li>
-        <li><a href="#">Jobs & Education</a> 
+        <li><a href="/Job&Education.html">Jobs & Education</a> 
         </li>
-        <li><a href="#">Sports</a> </li>
-        <li><a href="#">Technology</a> </li>
-        <li><a href="#">Lifestyle</a> </li>
-        <li><a href="#">Gallery</a> </li>
-        <li>
+        <li><a href="/sports.html">Sports</a> </li>
+        <li><a href="/technology.html">Technology</a> </li>
+        <li><a href="/lifeStyle.html">Lifestyle</a> </li>
+        <li><a href="/Gallery.html">Gallery</a> </li>
+        <li id="dropDown">
             <a href="#">
-               More.... <i class="fa fa-angle-down"></i>
-            </a>
+               More....<i class="fa fa-angle-down"></i></a>
+                <ul>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Opinion</a></li>
+                    <li><a href="#">Sunday Chronicle</a></li>
+                    <li><a href="#">Featured</a></li>
+                    <li><a href="#">Hyderabad Chronicle</a></li>
+                    <li><a href="#">Science</a></li>
+                    <li><a href="#">Editor's Pic</a></li>
+                    <li><a href="#">Just In</a></li>
+                    <li><a href="#">Astroguide</a></li>
+                </ul>
+               <!-- </i> -->
+            
         </li>
     </ul>
 </div>
 
-
+<!-- ----------------------------------------------------------------------------- -->
 <div id="worldGallery">
     <div >
         <h2>TOP GALLERY</h2>
@@ -832,6 +860,21 @@ function bigImg(x) {
     function normalImg(x) {
       x.style.boxShadow = "#ffffff 0px 0px 0px";
     }
+// ////////////////////////////////////////////////////////////////////////////////////
+    let dropDown=document.querySelector("#dropDown");
+dropDown.addEventListener("mouseover",dropDownMenushow);
+dropDown.addEventListener("mouseout",dropDownMenuOff)
+
+function dropDownMenushow(){
+  let dropDown_ul= dropDown.querySelector("ul");
+  dropDown_ul.style.display="block";
+
+}
+function dropDownMenuOff(){
+    let dropDown_ul= dropDown.querySelector("ul");
+  dropDown_ul.style.display="none";
+}
+
 </script>
 
 

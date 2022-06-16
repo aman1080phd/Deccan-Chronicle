@@ -5,9 +5,325 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>South</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <link rel="stylesheet" href="Nation.css">
 <body>
+
+    
+<style>
+    *{
+       margin: 0;
+       padding: 0;
+       font-family: 'Open Sans',sans-serif;
+   }
+   body{
+       width: 100vw;
+       text-align: center;
+       margin: auto;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+   }
+   .container{
+       margin: auto;
+       width: 80%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   #navbar{
+       width: 100%;
+       display: flex;
+       background-color: black;
+       color: white;
+       justify-content: space-around;
+       align-items: center;
+       font-size: 16px;
+       font-weight: bold;
+       height: 50px;
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       position: sticky;
+       top: 0;
+   }
+   .mid{
+       display: flex;
+       margin: 0 38px 0 16px;
+   }
+   .socialMedia>ul{
+       display: flex;
+       align-items: center;
+   }
+   .socialMedia>ul>li{
+       padding: 0 9px 0 9px;
+   }
+   .right{
+       display: flex;
+   }
+   .first{
+       border-right: 2px solid white;
+       padding-right: 5px;
+   }
+   .rightFirst{
+       border-right: 2px solid white;
+       padding-right: 6px;
+   }
+   .rightFirst+p{
+       margin-left: 6px;
+   }
+   .left{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+   }
+   .socialMedia>ul>li:hover{
+       cursor: pointer;
+   }
+   #checkbox:hover{
+       cursor: pointer;
+   }
+
+   #navbar>.left>i:hover{
+       cursor: pointer;
+   }
+   .first:hover{
+       cursor: pointer;
+   }
+   .second:hover{
+       cursor: pointer;
+   }
+   .socialMedia>ul>li>img{
+       display: flex;
+       justify-content: center;
+       width: 32px;
+   }
+   li{
+       list-style: none;
+       
+   }
+   i{
+       font-size: 26px;
+   }
+   /* ////////////////////////////logo//////////////////////// */
+   .logo{
+       width: 100%;
+       margin: auto;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       padding: 26px 0 26px 0;
+      border-bottom: 4px solid black;
+   }
+   .logo>span{
+       margin-top: 30px;
+       font-size: 14px;
+       font-weight: 600;
+   }
+   /* ////////////////////navbar2/////////////////////// */
+   .navbar2{
+       margin: auto;
+       /* margin-left: 134px; */
+       width: 100%;
+       display: flex;
+       justify-content: flex-start;
+       align-items: center;
+       border-bottom: 1px solid black;
+       margin-top: 12px;
+   }
+   .navbar2>ul{
+       display: flex;
+       align-items: center;
+   }
+   .navbar2>ul>li{
+       margin-bottom: 12px;
+   }
+   .navbar2>ul>li>a{
+       text-decoration: none;
+       color: black;
+       font-size: 16px;
+       padding:12px;
+   }
+   .fa-angle-down{
+       font-size: 14px;
+   }
+   /* ---------------------------dropDown-------------------------- */
+   #dropDown>ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: gray;
+    display: none;
+}
+#dropDown>ul>li>a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    
+}
+#dropDown>ul>li{
+    padding: 8px;
+    border-bottom: 2px solid white;
+}
+#dropDown>ul>li:hover{
+    background-color: black;
+}
+   /* ----------------------advertisement----------------------- */
+   .advertisement{
+       margin-top: 20px;
+       width: 100%;
+       height: 160px;
+       border: 1px solid black;
+   }
+   /* -------------------date---------------------------------- */
+   .date{
+   color:black;
+   width: 30vw;
+   height: 44px;
+}
+/* -------------------------footer-------------------------------- */
+.footer{
+    width: 100vw;
+    height: 180px;
+    margin-top: 20px;
+    background-color:rgb(211, 199, 199);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    overflow-x: hidden;
+}
+.google{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.google>input{
+    width: 50%;
+    height: 25px;
+}
+#srchBtn{
+    margin-top: 5px;
+}
+#srchBtn>i{
+   font-size: 10px;
+   padding: 4px;
+}
+.footerNav>ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px 15px 5px 15px;
+    
+}
+.footerNav>ul>li{
+    font-size: 12px;
+    font-weight: 600;
+    color: gray;
+    padding: 4px;
+}
+.copyright>p{
+    color: gray;
+}
+#srchBtn:hover{
+    background-color: black;
+    color: white;
+}
+
+</style>
+
+    <!-- -----------------header--------------------------- -->
+
+
+
+    <div id="navbar">
+
+        <div class="left">
+
+        <i class="fa-solid fa-bars"></i>
+        
+    <div class="mid">
+        <p class="first">e-Paper</p>
+        <p class="second">Sunday Chronicle</p>
+    </div>
+
+    <div class="socialMedia">
+        <ul>
+       <li> <i class="fa-brands fa-facebook-f"></i> </li>
+      <li>  <i class="fa-brands fa-twitter"></i> </li>
+      <li>  <i class="fa-brands fa-instagram"></i> </li>
+      <li> <img src="/deccan logo.png" alt=""></li>
+    </ul>
+    </div>
+
+</div>
+
+    <div class="right">
+       <p class="rightFirst"> <input id="checkbox" type="checkbox">Auto Refresh </p>
+       <p>Corporate Insolvency Resolution Process</p>
+    </div>
+
+    </div>
+    <!--///////////////////////2nd Logo////////////////////////////  -->
+    <div class="container">
+        <!-- /////////////////////////////////////////////////////// -->
+    <div class="logo">
+        <img src="/deccan logo2.png" alt="">
+        <span class="date">
+            <div class="date"></div>
+        </span>
+    </div>
+<!-- //////////////////////// 2nd Navbar////////////////////////////-->
+
+
+<div class="navbar2">
+    <ul>
+        <li><a href="/index.html">
+            <i class="fa fa-home"></i>
+        </a> </li>
+        <li>  <a href="/Nation.html">
+            Nation
+         </a></li>
+        <li><a href="/South.html">
+            South
+         </a></li>
+        <li><a href="#">World</a> </li>
+        <li><a href="#">Entertainment</a> </li>
+        <li><a href="/Job&Education.html">Jobs & Education</a> 
+        </li>
+        <li><a href="/sports.html">Sports</a> </li>
+        <li><a href="/technology.html">Technology</a> </li>
+        <li><a href="/lifeStyle.html">Lifestyle</a> </li>
+        <li><a href="/Gallery.html">Gallery</a> </li>
+        <li id="dropDown">
+            <a href="#">
+               More....<i class="fa fa-angle-down"></i></a>
+                <ul>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Opinion</a></li>
+                    <li><a href="#">Sunday Chronicle</a></li>
+                    <li><a href="#">Featured</a></li>
+                    <li><a href="#">Hyderabad Chronicle</a></li>
+                    <li><a href="#">Science</a></li>
+                    <li><a href="#">Editor's Pic</a></li>
+                    <li><a href="#">Just In</a></li>
+                    <li><a href="#">Astroguide</a></li>
+                </ul>
+               <!-- </i> -->
+            
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+<!-- ----------------------------------------------------------- -->
+
     <div id="paper">
    
         <div id="main">
@@ -210,8 +526,123 @@
 
 </div>
 </div>
+<!-- -------------------------footer--------------------------- -->
 
 
-  
+
+<div class="footer">
+    <div class="google">
+    <input type="text" id="search" placeholder="Google Search" value="">
+    <button id="srchBtn"> <i class="fa-solid fa-magnifying-glass">  Search</i>  </button>
+</div>
+
+    <div class="footerNav">
+        <ul>
+            <li>HOME</li>
+            <li>ASIAN AGE</li>
+            <li>ANDHRABHOOMI</li>
+            <li>FINANCIAL CHRONICLE</li>
+            <li>ABOUT US</li>
+            <li>CONTACT US</li>
+            <li>CLASSIFIEDS</li>
+            <li>BOOK CLASSIFIEDS</li>
+            <li>FEEDBACK</li>
+            <li>CAREERS</li>
+            <li>E-PAPER</li>
+            <li>PRIVACY POLICY</li>
+        </ul>
+
+        <div class="copyright">
+            <p>Copyright © 2015 - 2022 Deccan Chronicle.
+                Designed, Developed & Maintained By Daksham</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <!-----------------------------------------------------------  -->
 </body>
 </html>
+
+<script>
+    setInterval(displayClock, 500);
+function displayClock(){
+const datePlace= document.querySelector(".date");
+let today = new(Date);
+let dd= today.getDate();
+let mm= today.getMonth()+1;
+let yyyy= today.getFullYear();
+let hour = today.getHours();
+let min = today.getMinutes();
+let sec = today.getSeconds();
+let prepand = (hour>=12)?"PM" : "AM";
+
+if (hour>12 ) {
+    hour = hour - 12 ;
+}else if (hour == 0) {
+    hour = 12 ;
+}
+
+
+if (hour<10){
+    hour = "0" + hour;
+}else{
+    hour = hour
+}
+
+if (min<10){
+    min = "0" + min;
+}else{
+    min = min
+}
+
+if (sec<10){
+    sec = "0" + sec;
+}else{
+    sec = sec
+}
+    
+if (mm<10){
+    mm = "0" + mm;
+}else{
+    mm = mm
+}
+if (dd<10){
+    dd = "0" + dd;
+}else{
+    dd = dd
+}
+
+datePlace.innerHTML = dd + "-" + mm + "-" + yyyy + " Last Update " + hour +":" +min +":" + sec + prepand;
+}
+
+displayClock();
+////////////////////footer/////////////////////////////////////////////
+
+
+    let searchBtn= document.querySelector("#srchBtn");
+let search= document.querySelector("#search");
+
+searchBtn.addEventListener("click", function(){
+    let url= 'https://www.google.com/search?q=' + search.value ;
+    window.open(url);
+})
+
+// ////////////////////////////dropdown///////////////////////////////
+
+let dropDown=document.querySelector("#dropDown");
+dropDown.addEventListener("mouseover",dropDownMenushow);
+dropDown.addEventListener("mouseout",dropDownMenuOff)
+
+function dropDownMenushow(){
+  let dropDown_ul= dropDown.querySelector("ul");
+  dropDown_ul.style.display="block";
+
+}
+function dropDownMenuOff(){
+    let dropDown_ul= dropDown.querySelector("ul");
+  dropDown_ul.style.display="none";
+}
+</script>
