@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entertainment News | Letest Entertainment News from ...</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #header{
+            width: 100%;
+            height: 40px;
+            background-color: black;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #logo {
+            width: 30%;
+            height: 100px;
+            margin: auto;
+            margin-top: 10px;
+            font-size: 15px;
+            font-weight : bold;
+            text-align: center;
+        }
+        #logo img {
+            display: block;
+            margin: auto;
+            margin-bottom : 10px;
+        }
+        .logohr{
+            width: 78%;
+            margin: auto;
+            margin-top: 25px;
+            background-color: black;
+            height: 5px;
+            
+        }
+        #nevbar{
+            width: 78%;
+            height: 40px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-between;
+        }
+        #nevbar img { 
+            width: 20px;
+            height: 20px;
+            
+        }
+        .nevbarhr{
+            width: 78%;
+            margin: auto;
+            height: 0px;
+        }
+        #worldMostPopulor{
+            width: 78%;
+            margin: auto;
+            display: flex;
+            margin-top: 0px;
+        }
+        .small{
+            width: 16px;
+            height: 16px;
+            margin-left: 10px;
+        }
+        #dc{
+            width: 78%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+        #dc > p{
+            margin-left: 5px;
+            font-size: 18px;
+        }
+        .world{
+            margin-top: 8px;
+            width: 44%;
+        }
+        .world > div{
+            height: 410px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid rgb(199, 191, 191);
+        }
+        .world > div > img{
+            width: 100%;
+        }
+        .world > div > h2{
+            width: 90%;
+            padding: 10px;
+        }
+        .world > div > p{
+            font-size: 20px;
+            padding: 10px;
+        }
+        .world > hr{
+            width: 74px;
+            background-color: rgb(250, 73, 3);
+            height: 2px;
+            margin-bottom: 10px;
+            border-style: none;
+        }
+        .list{
+            width: 30%;
+            margin-top: 57px;
+            margin-left: 15px;
+        }
+        .list >div{
+            height: 60px;
+            display: flex;
+            margin-bottom: 25px;
+        }
+        .list > div > img{
+            width: 43%;
+            height: 70px;
+            margin-right: 10px;
+        }
+        .list > div > p{
+            width: 50%;
+            font-size: 20px;
+        }
+        #mostPopulor{
+            width: 36%;
+            margin-top: 56px;
+            margin-left: 5px;
+            padding: 0px 20px 20px 20px;
+        }
+        #mostPopulor > p{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .ms{
+            width: 256px;
+            background-color: rgb(255, 81, 0);
+            height: 2px;
+            margin-bottom: 10px;
+            border-style: none;
+        }
+        #mostPopulor > div{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            font-size: 23px;
+            
+        }
+        #mostPopulor >  div > img{
+            width: 35%;
+            height: 70px;
+        }
+        #worldGallery{
+            width: 78%;
+            margin: auto;
+            padding: 20px 10px 0px 10px;
+            background-color: #d6d6d6;
+            margin-top: 20px;
+            display: flex;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.751) 0px 3px 6px, rgba(0, 0, 0, 0.687) 0px 3px 6px;
+        }
+        #worldGallery > div:nth-child(1){
+            width: 65%;
+            
+        }
+        #worldGallery > div:nth-child(2){
+            width:35%;
+            margin-left: 2px;
+            padding-left:20px;
+            padding-right: 10px;
+        }
+        #focuspic{
+            width: 100%;
+        }
+        .galleryhr{
+            width: 145px;
+            background-color: rgb(250, 73, 3);
+            height: 2.5px;
+            margin-bottom: 10px;
+            border-style: none;
+        }
+        .MoreGalleryhr{
+            width: 278px;
+            background-color: rgb(250, 73, 3);
+            height: 2.5px;
+            margin-bottom: 10px;
+            border-style: none;
+        }
+        #mg > div > img{
+            width: 45%;
+            height: 87px;
+            margin-right: 30px;
+        }
+        #mg > div{
+            display: flex;
+            margin-bottom: 5px;
+            font-size: 19px;
+            padding: 10px;
+        }
+        .neighbours{
+            width: 78%;
+            margin: auto;
+        }
+        .neighboursNews{
+            width: 100%;
+            display: flex;
+            padding-left: 30px;
+        }
+        .neighboursNews > div > img{
+            width: 100%;
+        }
+        .smallNews > div{
+            display: flex;
+        }
+        .leadingNews > div{
+            width: 23%;
+            margin-right: 25px;
+        }
+        .leadingNews > div > img{
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .smallNews > div{
+            width: 23%;
+            margin-right: 25px;
+        }
+        .smallNews > div > img{
+            width: 100%;
+            height: 50px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-right: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="header">
+        
+    </div>
+    <div id="logo">
+        <img src="https://d2u6vujtbrga6l.cloudfront.net/images/logo.png" alt="error">
+        <p>Tuesday, Jun 14, 2022 | Last Update : 01:22 PM IST</p>
+    </div>
+    <hr class="logohr">
+    <div id="nevbar">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSWhWfr245k-ScODlTGVvxKHo92Fh8YOi2k8JskHqVss8j3UBUTPSc&usqp=CAU" alt="error">
+        <p>Nation</p>
+        <p>South</p>
+        <p>World</p>
+        <p>Entertainment</p>
+        <p>Jobs & Education</p>
+        <p>Sports</p>
+        <p>Technology</p>
+        <p>Lifestyle</p>
+        <p>Gallary</p>
+        <select name="topics" id="more">
+            <option value="">More ...</option>
+            <option value="Business">Business</option>
+            <option value="Opinion">Opinion</option>
+            <option value="Sunday Chronicle">Sunday Chronicle</option>
+            <option value="Featured">Featured</option>
+            <option value="Heydrabad Chronicle">Heydrabad Chronicle</option>
+            <option value="Science">Science</option>
+            <option value="Editor's Picks">Editor's Picks</option>
+            <option value="Just In">Just In</option>
+            <option value="Astroguide">Astroguide</option>
+        </select>
+    </div>
+    <hr class="nevbarhr">
+    <div id="dc">
+        <img class="small" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSWhWfr245k-ScODlTGVvxKHo92Fh8YOi2k8JskHqVss8j3UBUTPSc&usqp=CAU" alt="error">
+        <p>&gt;&gt; Entertainment</p>
+    </div>
+    <div id="worldMostPopulor">
+        <div class="world">
+            <h2>ENTERTAINMENT</h2>
+            <hr style="width: 268px; height: 3px">
+            <div style="height: 430px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-l970jo2ftej89gr8urqkbd2093-20220329194904.jpeg" alt="error">
+                <h2>Salman Khan denies any threat to life</h2>
+                <p>So will not be provided additional police security. The actor leaves for Hyderabad to shoot ‘KEKD’</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-767hsm5tsvbhpu92u5t5hpout6-20201021154140.jpeg" alt="error">
+                <h2>Ante Sundaraniki is a light-hearted drama</h2>
+                <p>Says Nani, who is excited with his series of line–ups</p>
+            </div>
+        </div>
+        <div class="list">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-rr3g3eqojk0d79epl7ch1jgca3-20220606023535.jpeg" alt="error">
+                <p>Bitten by the writing bug</p>
+            </div>
+            <div style="height: 105px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-rr3g3eqojk0d79epl7ch1jgca3-20220606023807.jpeg" alt="error">
+                <p>Kartik Aryan, Katrina SRK, Aditya Roy Kapoor... test covid +ve</p>
+            </div>
+            <div style="height: 80px">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-3vrs3rhhigf2ujcb70tmvaasq2-20220605022859.jpeg" alt="error">
+                <p>I want to work with good makers: Varun Mitra</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/c54036d054c7c8253415ffcdfe34e2a9058cc7a4-tc-img-thumb.jpg" alt="error">
+                <p>Hrithik’s cousin debuts</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/c54036d054c7c8253415ffcdfe34e2a9058cc7a4-tc-img-thumb.jpg" alt="error">
+                <p>Remenbering KK</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-k4q340ca7hi1m5hc9p4l1el3k4-20220603175831.jpeg" alt="error">
+                <p>Major Movie Review</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/c54036d054c7c8253415ffcdfe34e2a9058cc7a4-tc-img-thumb.jpg" alt="error">
+                <p>I Have Been Waiting To Get Married ...</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/c54036d054c7c8253415ffcdfe34e2a9058cc7a4-tc-img-thumb.jpg" alt="error">
+                <p>‘I’m happy the way my career is moving now’</p>
+            </div>
+        </div>
+        <div id="mostPopulor">
+            <p>MOVIE REVIEWS</p>
+            <hr class="ms">
+            <div>
+                <div>
+                    <p>Sridevi Soda Center movie review</p>
+                    <h5>RATING : 5</h5>
+                </div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-kuri4cmn6lbhmd8t5amea0t2h5-20210827164123.jpeg" alt="error">
+            </div>
+            <div>
+                <div>
+                    <p>Ram Asur movie review</p>
+                    <h5>RATING : 5</h5>
+                </div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-q9gb6bjnf130u6odpb1b0lerr3-20211119180015.jpeg" alt="error">
+            </div>
+            <div>
+                <div>
+                    <p>Pushpa Telugu movie review</p>
+                    <h5>RATING : 6</h5>
+                </div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-s5l0ihtqe9ig4adnv34c75cj70-20211217153612.jpeg" alt="error">
+            </div>
+            <div>
+                <div>
+                    <p>Radhe Shyam movie review: High on grandeur, low on content</p>
+                    <h5>RATING : 5</h5>
+                </div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-3f0216pssk0v54kgiiktf4ots2-20220311142851.jpeg" alt="error">
+            </div>
+            <div>
+                <div>
+                    <p>Bheemla Nayak movie review</p>
+                    <h5>RATING : 6</h5>
+                </div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-rphia06f8pf1irv51b3ati6o35-20220225144338.jpeg" alt="error">
+            </div>
+            <div>
+                <div>
+                    <p>Gamanam Telugu movie review</p>
+                    <h5>RATING : 6</h5>
+                </div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-g13l9tnnnssgg92e4luc975a51-20211210183327.jpeg" alt="error">
+            </div>
+        </div>
+    </div>
+    <div id="worldGallery">
+        <div >
+            <h2>GALLERY</h2>
+            <hr class="galleryhr">
+            <img id="focuspic" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-3e60l6v07vk8jd76r50eikc391-20201209155425.Medi.jpeg" alt="error">
+            <h2>Niharika and Chaitanya wedding ceremony</h2>
+        </div>
+        <div class="moregallery">
+            <h2>MORE GALLERIES</h2>
+            <hr class="MoreGalleryhr">
+            <div id="mg">
+                <div onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-3e60l6v07vk8jd76r50eikc391-20201209155425.Medi.jpeg" alt="error">
+                    <p>Niharika and Chaitanya wedding ceremony</p>
+                </div>
+                <div onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-an4v33r20oo3l8ussn00bv8gu2-20200810174058.Medi.jpeg" alt="error">
+                    <p>Rana Daggubati and Miheeka Bajaj performed the traditional Satyanrayanara Vratam
+                    </p>
+                </div>
+                <div onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-es84r4783g3f7ti3uq07f80o40-20200809175935.Medi.jpeg" alt="error">
+                    <p>Actor RanaDaggubati and entrepreneur Miheeka Bajaj tied the knot on Saturday evening</p>
+                </div>
+                <div onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-nb73u1i5ep3absdussa9dhj7t3-20200406113529.Medi.jpeg" alt="error">
+                    <p>South stars stand in solidarity with PM's 9 baje 9 minute initiative</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="margin: auto; margin-top:20px; width:78%; margin-bottom: 1px;">
+    <hr style="margin: auto; margin-bottom: 10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);">
+    <!-- bollywood -->
+    <div class="neighbours">
+        <div>
+            <h2>BOLLYWOOD</h2>
+            <hr style="width: 203px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div class="neighboursNews">
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-t7d05blc2uv91ip3bs19a6rf35-20180830021823.jpeg" alt="error">
+                <h3>'The Kashmir Files' director Vivek Agnihotri gets 'Y' category security</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Shaunak Sen's 'All That Breathes' wins Cannes award</h4>
+            </div>
+            <div style="margin: 0px 20px 0px 20px; width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-seduqk474polc8g9sjqnr7bqi5-20200419105129.jpeg" alt="error">
+                <h3>Nani bowled over by Shahid Kapoor's performance in 'Jersey' Hindi remake</h3>
+                <h4 style="margin-top: 20px; color: #323435">#R Madhavan's 'Rocketry: The Nambi Effect' to release theatrically on July 1</h4>
+            </div>
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-9e094jdbpprr5d9nmgqnstka00-20220602082403.jpeg" alt="error">
+                <h3>Singer KK's death gets organisers in trouble</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Madhuri says Thank You to fans</h4>
+            </div>
+        </div>
+    </div> 
+    <hr style="margin: auto; width:78%; margin-bottom: 1px; margin-top: 5px;">
+    <hr style="margin: auto; margin-bottom:10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);"> 
+    <!-- hollywood -->
+    <div style="width:78%; margin: auto;" class="asia">
+        <!-- asia -->
+        <div>
+            <h2>HOLLYWOOD</h2>
+            <hr style="width: 204px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div style="display: flex; margin-left: 40px;" class="leadingNews">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-va483gh4c10nf3ejf26lk0en30-20190724151112.jpeg" alt="error">
+                <h3>Netflix pauses all its future projects, acquisitions from Russia</h3>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-rgbn1md3qeh0rd0qdf9e9rton4-20220328141610.jpeg" alt="error">
+                <h3>Will Smith confronts Chris Rock, then wins best actor Oscar</h3>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-63rrdhegqa9mhds521kr1ijab2-20220214161025.jpeg" alt="error">
+                <h3>Amazon unveils first teaser of 'Lord of the Rings' prequel series at Super Bowl</h3>
+            </div>
+            <div style="margin-right: 0px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-h4s2a4nd45tttagk7ml09mvv24-20220308104920.jpeg" alt="error">
+                <h3>Alia Bhatt to make Hollywood debut with Gal Gadot-starrer film 'Heart Of Stone'</h3>
+            </div>
+        </div>
+        <div style="display: flex; margin-top: 20px; margin-left: 40px;" class="smallNews">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-idn7a4dd3ksnirqvsnot0gu7d6-20220421022126.jpeg" alt="error">
+                <h4>Johnny Depp takes a stand against his ex-wife</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-5rjskoqninuecl2fp4b9alcp07-20220416121539.jpeg" alt="error">
+                <h4>Charlie Chaplin - Remembering the legend on his 133th birth anniversary</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-0224c9ttvi6fhab2jo98l7p0r2-20220209070324.jpeg" alt="error">
+                <h4>Indian documentary 'Writing With Fire' gets shortlisted for Oscar awards</h4>
+            </div>
+            <div style="margin-right: 0px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-sco35k5vaueme6qu2li67palq0-20220330202131.jpeg" alt="error">
+                <h4>No laughing matter!</h4>
+            </div>
+        </div>
+    </div>
+    <hr style="margin: auto; width:78%; margin-bottom: 1px; margin-top: 15px;">
+    <hr style="margin: auto; margin-bottom:10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);">
+    <!-- TELEVISION -->
+    <div class="neighbours">
+        <div>
+            <h2>TELEVISION</h2>
+            <hr style="width: 187px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div class="neighboursNews">
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://dc-cdn.s3-ap-southeast-1.amazonaws.com/dc-Cover-nmfvduspts3v0k6fij8mg0oma1-20160706011416.jpeg" alt="error">
+                <h3>Prakash Jha to helm web series based on PV Narasimha Rao's life</h3>
+                <h4 style="margin-top: 20px; color: #323435">#A biopic on PV Narasimha Rao</h4>
+            </div>
+            <div style="margin: 0px 20px 0px 20px; width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-ji25k12rsth3gg17dnlqh33k30-20211216150723.jpeg" alt="error">
+                <h3>Twitter India launches new 'Bigg Boss' emoji</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Horse riding through the lockdown</h4>
+            </div>
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-t1s0gii512ptajnnnk34sdatu7-20200217002922.jpeg" alt="error">
+                <h3>Bigg Boss OTT pays tribute to Sidharth Shukla</h3>
+                <h4 style="margin-top: 20px; color: #323435">#'Ramayan' fame Arvind Trivedi passes away at 82</h4>
+            </div>
+        </div>
+    </div> 
+    <hr style="margin: auto; width:78%; margin-bottom: 1px; margin-top: 15px;">
+    <hr style="margin: auto; margin-bottom:10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);">
+    <!-- Music -->
+    <div style="width:78%; margin: auto;" class="asia">
+        <div>
+            <h2>MUSIC</h2>
+            <hr style="width: 100px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div style="display: flex; margin-left: 40px;" class="leadingNews">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-bg6v5i39kqg36431ld4lvnblm2-20220103133701.jpeg" alt="error">
+                <h3>A.R. Rahman's daughter Khatija announces engagement</h3>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-823bir7phfjqh19gf1b31467p2-20220601112235.jpeg" alt="error">
+                <h3>Hum, rahen ya na rahen kal</h3>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-eoouf6o622k0n03i8oufbvseq4-20220216083035.jpeg" alt="error">
+                <h3>Singer-composer Bappi Lahiri dies at 69</h3>
+            </div>
+            <div style="margin-right: 0px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-c3t4hajks44qfsd29vt6n5iao0-20211214093548.jpeg" alt="error">
+                <h3>Interview | Indian classical music needs boost</h3>
+            </div>
+        </div>
+        <div style="display: flex; margin-top: 20px; margin-left: 40px;" class="smallNews">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-6qpfcghf8jlskr85m7ed1tnbu4-20211206175530.jpeg" alt="error">
+                <h4>From the real world to reel world</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-5v7d5pefk7tjkj9v8cvjso3ki1-20220419095223.jpeg" alt="error">
+                <h4>You can make a mark with your own songs, Says Bank</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-uajt5ujlrgls876m0k7t2bpqa1-20211017095250.jpeg" alt="error">
+                <h4>Adele gets candid</h4>
+            </div>
+            <div style="margin-right: 0px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-mtrnk14g65e10m4u08arc486s2-20220506192555.jpeg" alt="error">
+                <h4>ARR’s daughter Khatija weds</h4>
+            </div>
+        </div>
+    </div>
+    <hr style="margin: auto; width:78%; margin-bottom: 1px; margin-top: 15px;">
+    <hr style="margin: auto; margin-bottom:10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);">
+    <!-- TOLLYWOOD -->
+    <div class="neighbours">
+        <div>
+            <h2>TOLLYWOOD</h2>
+            <hr style="width: 200px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div class="neighboursNews">
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-919h372du2nbc6pr9ljgoea8m1-20220406234251.jpeg" alt="error">
+                <h3>Hyderabad court stops screening of RGV's film over pending dues</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Allu Arjun is my friend, he likes me too</h4>
+            </div>
+            <div style="margin: 0px 20px 0px 20px; width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-9092vp0aqg9jd6d1p5m456suk6-20220223072048.jpeg" alt="error">
+                <h3>Nailing the fitness game!</h3>
+                <h4 style="margin-top: 20px; color: #323435">#It’s an honour to be a part of Major: Sobhita Dhulipala</h4>
+            </div>
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-fks46a644j1ddlsvfaqbrish36-20220411193929.jpeg" alt="error">
+                <h3>Dulquer starrer has scenes at world’s highest post office</h3>
+                <h4 style="margin-top: 20px; color: #323435">#'Radhe Shyam' does very well in Telugu, but loses in Bollywood</h4>
+            </div>
+        </div>
+    </div> 
+    <hr style="margin: auto; width:78%; margin-bottom: 1px; margin-top: 15px;">
+    <hr style="margin: auto; margin-bottom:10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);">
+    <!-- KOLLYWOOD -->
+    <div style="width:78%; margin: auto;" class="asia">
+        <!-- africa -->
+        <div>
+            <h2>KOLLYWOOD</h2>
+            <hr style="width: 204px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div style="display: flex; margin-left: 40px;" class="leadingNews">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-qquos35h2tcvlkqljaa1mjquk6-20211213182429.jpeg" alt="error">
+                <h3>Told Sara Ali Khan not to call me Thalaiva, but she does not listen: Dhanush</h3>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-iahj5ne8v1oejhqisdb8209500-20211105104941.jpeg" alt="error">
+                <h3>Watch: 'Jai Bhim' features on Oscars' YouTube channel</h3>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-tsqfk3ini5se1ukudae6sgibi1-20211212120400.jpeg" alt="error">
+                <h3>Rajinikanth turns 71: Fans gather outside Thalaiva's residence in Chennai</h3>
+            </div>
+            <div style="margin-right: 0px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-kreqqufsgvrk4prrreia3f8tr3-20211207182732.jpeg" alt="error">
+                <h3>I have been working all through last year: Shruti Haasan</h3>
+            </div>
+        </div>
+        <div style="display: flex; margin-top: 20px; margin-left: 40px;" class="smallNews">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-67747263qcsd4o25h66pjn3rj6-20211225120347.jpeg" alt="error">
+                <h4>Katrina Kaif, Vijay Sethupathi team up for Sriram Raghavan's thriller Merry Christmas</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-f8h26tollrq7og8pf5tle9jfk3-20200328154805.jpeg" alt="error">
+                <h4>Kamal Haasan has fully recovered from COVID-19, says hospital</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-1nskatpnrbcp2vgdumm7bkn1e6-20211106145516.jpeg" alt="error">
+                <h4>India's Oscar entry 'Koozhangal' to be screened at IFFI 2021</h4>
+            </div>
+            <div style="margin-right: 0px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-8i6cov2nia0vn21ol6b5690i60-20220126164819.jpeg" alt="error">
+                <h4>Puneeth Rajkumar's last film 'James' unveils first look of Kannada star</h4>
+            </div>
+        </div>
+    </div>
+    <hr style="margin: auto; width:78%; margin-bottom: 1px; margin-top: 15px;">
+    <hr style="margin: auto; margin-bottom:10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);">
+    <!-- SANDALWOOD -->
+    <div class="neighbours">
+        <div>
+            <h2>SANDALWOOD</h2>
+            <hr style="width: 219px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div class="neighboursNews">
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-osm2814b2oif3cskraru56sic5-20211015010257.jpeg" alt="error">
+                <h3>Fans pelt stones at theatre as Kichcha Sudeep's 'Kotigobba 3' release gets delayed</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Team Dollu gets the right beat</h4>
+            </div>
+            <div style="margin: 0px 20px 0px 20px; width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-7qna4k04por590b8jg7klgdjk0-20211029143332.jpeg" alt="error">
+                <h3>Kannada star Puneeth Rajkumar passes away at 46</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Kannada actor Satyajith passes away at 72</h4>
+            </div>
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-aovsrpg5bof4qr6c62tpclq9s2-20211031085158.jpeg" alt="error">
+                <h3>Last rites of actor Puneeth Rajkumar performed in Bengaluru
+                    ANI</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Veteran Kannada film actor S Shivaram dies at 83</h4>
+            </div>
+        </div>
+    </div>
+    <hr style="margin: auto; width:78%; margin-bottom: 1px; margin-top: 15px;">
+    <hr style="margin: auto; margin-bottom:10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);">
+    <!-- MOLLYWOOD -->
+    <div style="width:78%; margin: auto;" class="asia">
+        <div>
+            <h2>MOLLYWOOD</h2>
+            <hr style="width: 209px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div style="display: flex; margin-left: 40px;" class="leadingNews">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-sq1mft5d7g2r6qtfl3aqrsuq56-20220223074246.jpeg" alt="error">
+                <h3>Renowned Malayalam actor KPAC Lalitha passes away</h3>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-qtjlf18q7jne0hl5g40k4gamo7-20191123002619.jpeg" alt="error">
+                <h3>Actress assault case: Crime branch summons Malayalam director Rafi for interrogation</h3>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-cctbvgjrju6gp4co4ar4qo9dt5-20220121014528.jpeg" alt="error">
+                <h3>Dulquer Salman tests positive for coronavirus</h3>
+            </div>
+            <div style="margin-right: 0px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-o657a1tft6ojceotsbrco05a53-20180628225624.jpeg" alt="error">
+                <h3>Dileep gets interim protection from arrest, ordered to appear for interrogation</h3>
+            </div>
+        </div>
+        <div style="display: flex; margin-top: 20px; margin-left: 40px;" class="smallNews">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-823bir7phfjqh19gf1b31467p2-20220601124218.jpeg" alt="error">
+                <h4>Sexual assault case: Actor Vijay Babu reaches Kochi from Dubai</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-h4s2a4nd45tttagk7ml09mvv24-20220306130618.jpeg" alt="error">
+                <h4>Prithviraj-starrer 'Jana Gana Mana' to release in April</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-mvtcoc4joa3k4tl940l2aeq1c5-20180119010822.jpeg" alt="error">
+                <h4>Kerala HC adjourns Dileep's anticipatory bail plea till February 2</h4>
+            </div>
+            <div style="margin-right: 0px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-8i6cov2nia0vn21ol6b5690i60-20220124131610.jpeg" alt="error">
+                <h4>Actress assault case: Crime Branch summons Dileep for third consecutive day</h4>
+            </div>
+        </div>
+    </div>
+    <hr style="margin: auto; width:78%; margin-bottom: 1px; margin-top: 15px;">
+    <hr style="margin: auto; margin-bottom:10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);">
+    <!-- THEATRE -->
+    <div class="neighbours">
+        <div>
+            <h2>THEATRE</h2>
+            <hr style="width: 149px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div class="neighboursNews">
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-f8q3h5bpv2vlfiu0v1hcqccle7-20220117082248.jpeg" alt="error">
+                <h3>Legendary Kathak dancer Birju Maharaj passes away</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Andhra Pradesh HC questions state about ban on Chintamani Natakam</h4>
+            </div>
+            <div style="margin: 0px 20px 0px 20px; width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-o2tcqep4brbefqra9ranl5odb7-20190923134141.jpeg" alt="error">
+                <h3>Chinar Grover- The food blogger soon going to be in food web series!</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Abhishek Nama is thriller bound</h4>
+            </div>
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-tsedq3ov1osfm54qbvb9chb1j0-20200124011149.jpeg" alt="error">
+                <h3>Like father, like son</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Third time’s the winner</h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function bigImg(x) {
+      x.style.boxShadow = "rgba(0, 0, 0, 0.35) 0px 5px 15px";
+    }
+    
+    function normalImg(x) {
+      x.style.boxShadow = "#ffffff 0px 0px 0px";
+    }
+    </script>
