@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World News | Live Coverage And Latest Breaking International News ...</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #header{
+            width: 100%;
+            height: 40px;
+            background-color: black;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #logo {
+            width: 30%;
+            height: 100px;
+            margin: auto;
+            margin-top: 10px;
+            font-size: 15px;
+            font-weight : bold;
+            text-align: center;
+        }
+        #logo img {
+            display: block;
+            margin: auto;
+            margin-bottom : 10px;
+        }
+        .logohr{
+            width: 78%;
+            margin: auto;
+            margin-top: 25px;
+            background-color: black;
+            height: 5px;
+            
+        }
+        #nevbar{
+            width: 78%;
+            height: 40px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-between;
+        }
+        #nevbar img { 
+            width: 20px;
+            height: 20px;
+            
+        }
+        .nevbarhr{
+            width: 78%;
+            margin: auto;
+            height: 0px;
+        }
+        #worldMostPopulor{
+            width: 78%;
+            margin: auto;
+            display: flex;
+            margin-top: 15px;
+        }
+        #worldMostPopulor > p{
+            font-size: 12px;
+        }
+        .small{
+            width: 16px;
+            height: 16px;
+            margin-left: 10px;
+        }
+        #dc{
+            width: 78%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+        #dc > p{
+            margin-left: 5px;
+            font-size: 18px;
+        }
+        .world{
+            margin-top: 8px;
+            width: 38%;
+        }
+        .world > div{
+            height: 410px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid rgb(199, 191, 191);
+        }
+        .world > div > img{
+            width: 100%;
+        }
+        .world > div > h3{
+            width: 90%;
+            padding: 10px;
+        }
+        .world > div > p{
+            font-size: 16px;
+            padding: 10px;
+        }
+        .world > hr{
+            width: 74px;
+            background-color: rgb(250, 73, 3);
+            height: 2px;
+            margin-bottom: 10px;
+            border-style: none;
+        }
+        .list{
+            width: 25%;
+            margin-top: 44px;
+            margin-left: 10px;
+            /* border: 1px solid red; */
+        }
+        .list >div{
+            height: 70px;
+            display: flex;
+            margin-bottom: 30px;
+        }
+        .list > div > img{
+            width: 43%;
+            height: 70px;
+            margin-right: 10px;
+        }
+        .list > div > p{
+            width: 50%;
+            font-size: 17px;
+        }
+        #mostPopulor{
+            width: 36%;
+            margin-top: 43px;
+            margin-left: 5px;
+            padding: 0px 20px 20px 20px;
+            /* border: 1px solid rgb(195, 255, 0); */
+        }
+        #mostPopulor > p{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .ms{
+            width: 205px;
+            background-color: rgb(255, 81, 0);
+            height: 2px;
+            border-style: none;
+        }
+        #mostPopulor > div{
+            display: flex;
+            margin-bottom: 20px;
+        }
+        #mostPopulor >  div > img{
+            width: 30%;
+            height: 80px;
+        }
+        #worldGallery{
+            width: 78%;
+            margin: auto;
+            padding: 20px 10px 0px 10px;
+            background-color: #d6d6d6;
+            margin-top: 20px;
+            display: flex;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.751) 0px 3px 6px, rgba(0, 0, 0, 0.687) 0px 3px 6px;
+        }
+        #worldGallery > div:nth-child(1){
+            width: 65%;
+        }
+        #worldGallery > div:nth-child(2){
+            width:35%;
+            margin-left: 2px;
+            padding-left:20px;
+            padding-right: 10px;
+        }
+        #focuspic{
+            width: 100%;
+        }
+        .galleryhr{
+            width: 145px;
+            background-color: rgb(250, 73, 3);
+            height: 2.5px;
+            margin-bottom: 10px;
+            border-style: none;
+        }
+        .MoreGalleryhr{
+            width: 278px;
+            background-color: rgb(250, 73, 3);
+            height: 2.5px;
+            margin-bottom: 10px;
+            border-style: none;
+        }
+        #mg > div > img{
+            width: 45%;
+            height: 87px;
+            margin-right: 30px;
+        }
+        #mg > div{
+            display: flex;
+            margin-bottom: 5px;
+            font-size: 19px;
+            padding: 10px;
+        }
+        .neighbours{
+            width: 78%;
+            margin: auto;
+        }
+        .neighboursNews{
+            width: 100%;
+            display: flex;
+            padding-left: 30px;
+        }
+        .neighboursNews > div > img{
+            width: 100%;
+        }
+        .smallNews > div{
+            display: flex;
+        }
+        .leadingNews > div{
+            width: 23%;
+            margin-right: 25px;
+        }
+        .leadingNews > div > img{
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .smallNews > div{
+            width: 23%;
+            margin-right: 25px;
+        }
+        .smallNews > div > img{
+            width: 100%;
+            height: 50px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-right: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="header">
+        
+    </div>
+    <div id="logo">
+        <img src="https://d2u6vujtbrga6l.cloudfront.net/images/logo.png" alt="error">
+        <p>Tuesday, Jun 14, 2022 | Last Update : 01:22 PM IST</p>
+    </div>
+    <hr class="logohr">
+    <div id="nevbar">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSWhWfr245k-ScODlTGVvxKHo92Fh8YOi2k8JskHqVss8j3UBUTPSc&usqp=CAU" alt="error">
+        <p>Nation</p>
+        <p>South</p>
+        <p>World</p>
+        <p>Entertainment</p>
+        <p>Jobs & Education</p>
+        <p>Sports</p>
+        <p>Technology</p>
+        <p>Lifestyle</p>
+        <p>Gallary</p>
+        <select name="topics" id="more">
+            <option value="">More ...</option>
+            <option value="Business">Business</option>
+            <option value="Opinion">Opinion</option>
+            <option value="Sunday Chronicle">Sunday Chronicle</option>
+            <option value="Featured">Featured</option>
+            <option value="Heydrabad Chronicle">Heydrabad Chronicle</option>
+            <option value="Science">Science</option>
+            <option value="Editor's Picks">Editor's Picks</option>
+            <option value="Just In">Just In</option>
+            <option value="Astroguide">Astroguide</option>
+        </select>
+    </div>
+    <hr class="nevbarhr">
+    <div id="dc">
+        <img class="small" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSWhWfr245k-ScODlTGVvxKHo92Fh8YOi2k8JskHqVss8j3UBUTPSc&usqp=CAU" alt="error">
+        <p>&gt;&gt; World</p>
+    </div>
+    <div id="worldMostPopulor">
+        <div class="world">
+            <p>WORLD</p>
+            <hr class="hrworld">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-g8esftggd71s5rmm0p3lflkl10-20220612064214.jpeg" alt="error">
+                <h3>China is hardening its position along LAC; US Secretary of Defense</h3>
+                <p>This is the second time this week that a senior US official has commented on the India-China stand-off</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-t1g02g0da4okqabdmppkrung71-20220611115202.jpeg" alt="error">
+                <h3>US lifts COVID-19 test requirement for international travel</h3>
+                <p>A senior senior administration official said that the agency would reevaluate the need for the testing requirement every 90 days</p>
+            </div>
+        </div>
+        <div class="list">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-jgbpi0o0p2ld76muet9tu5gvc5-20220607105000.jpeg" alt="error">
+                <p>Boris Johnson wins no-confidence vote: but the margin will make him nervous</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-aavdqqcm0t04ghch753ikskla1-20220326000331.jpeg" alt="error">
+                <p>British Prime Minister Boris Johnson to face confidence vote</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-f2u39afj17in2npbh6is2loca6-20170718020817.jpeg" alt="error">
+                <p>Pakistan's General Musharraf critical in UAE, says ex-minister</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-o0ggi60qreumqdp7jacrsvg3u1-20220605122644.jpeg" alt="error">
+                <p>Amid Imran Khan's assassination rumours, security agencies on high alert in Islamabad</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-uv23638o8qnk2smdvvcdj14hr1-20220604124043.jpeg" alt="error">
+                <p>Russia may be in Ukraine to stay after 100 days of war</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-823bir7phfjqh19gf1b31467p2-20220601132030.jpeg" alt="error">
+                <p>Shanghai starts coming back to life as COVID lockdown eases</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-ehn3cgkc6ju8tj48fo0leqqlc6-20220530120936.jpeg" alt="error">
+                <p>No survivors found at Tara Air plane crash site, collection of dead bodies begins</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-6lq8j792kb1mktl2rikid8u1a7-20220529120349.jpeg" alt="error">
+                <p>Plane carrying 22 people on board, including four Indians goes missing in Nepal</p>
+            </div>
+        </div>
+        <div id="mostPopulor">
+            <p>MOST POPULOR</p>
+            <hr class="ms">
+            <div>
+                <p>World's largest cricket jersey was made within nine days</p>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-b5nq5e0ku3g1nctek2tkqtah67-20220601160558.jpeg" alt="error">
+            </div>
+            <div>
+                <p>Viral fever with gastro, dengue cases increase in Hyderabad</p>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-efb18qerodo9jp7egg2v41otq4-20210607215443.jpeg" alt="error">
+            </div>
+            <div>
+                <p>AP man donates his retirement funds for SSY scheme, gets PM Modi's pat</p>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-affitcqkm355isuv1pg8jsobg2-20220530033206.jpeg" alt="error">
+            </div>
+            <div>
+                <p>Low blow for alcohol lovers as liquor prices go higher in Telangana</p>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-gh6knkudub2ksq1v7mg76isbi6-20170710011908.jpeg" alt="error">
+            </div>
+            <div>
+                <p>Nation's envy: TS legislators are highest paid in the country</p>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-0fr7ofu4cef9a2dbis2tuej3p1-20161209024602.jpeg" alt="error">
+            </div>
+            <div>
+                <p>Experts for study on bee population</p>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-jo4gv47qlta9dm26aflc6le3i4-20180816125314.jpeg" alt="error">
+            </div>
+        </div>
+    </div>
+    <div id="worldGallery">
+        <div >
+            <h2>GALLERY</h2>
+            <hr class="galleryhr">
+            <img id="focuspic" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-dmaetsmltie50e4okrnrnbo723-20211113155011.Medi.jpeg" alt="error">
+        </div>
+        <div class="moregallery">
+            <h2>MORE GALLERIES</h2>
+            <hr class="MoreGalleryhr">
+            <div id="mg">
+                <div onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-dmaetsmltie50e4okrnrnbo723-20211113155011.Medi.jpeg" alt="error">
+                    <p>In Pictures | COP26 protesters in Glasgow</p>
+                </div>
+                <div onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-v7hd9r03mm20tbn9h879icamc1-20200727100733.Medi.jpeg" alt="error">
+                    <p>This year, Hajj pilgrims to be given sterilised pebbles</p>
+                </div>
+                <div onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-2gjsa7d44bh66b9jqdbr045ht4-20200725181931.Medi.jpeg" alt="error">
+                    <p>In Pictures| Standoff with federal agents continues in Portland</p>
+                </div>
+                <div onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-e4iu0nlq73brfqqkkb7ritd8j1-20200501124511.Medi.jpeg" alt="error">
+                    <p>For these penguins in Singapore’s city zoo, lockdown is flippin' fun</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="margin: auto; margin-top:20px; width:78%; margin-bottom: 1px;">
+    <hr style="margin: auto; margin-bottom: 10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);">
+    <div class="neighbours">
+        <div>
+            <h2>NEIGHBOURS</h2>
+            <hr style="width: 203px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div class="neighboursNews">
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://dc-cdn.s3-ap-southeast-1.amazonaws.com/dc-Cover-dcb8amp2r8vps8n5ep2i7o2125-20160718153721.jpeg" alt="error">
+                <h3>Sri Lankan Prime Minister Mahinda Rajapaksa resigns after violent clashes</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Sri Lanka's new PM Wickremesinghe says he looks forward to closer ties with India</h4>
+            </div>
+            <div style="margin: 0px 20px 0px 20px; width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-h4p2ufdalfobav10rjv3fnfn31-20170722172858.jpeg" alt="error">
+                <h3>Arjuna Ranatunga seeks help from Sathya Sai trust</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Sri Lanka PM Ranil Wickremesinghe appointed Finance Minister by Prez Gotabaya</h4>
+            </div>
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-bbjaof6hp88cj407gi6f8kdgj2-20220512113337.jpeg" alt="error">
+                <h3>Sri Lanka president set to name new Prime Minister</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Accidental fire broke out at Sialkot garrison, no casualty: Pak Army</h4>
+            </div>
+        </div>
+    </div> 
+    <hr style="margin: auto; width:78%; margin-bottom: 1px; margin-top: 5px;">
+    <hr style="margin: auto; margin-bottom:10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);"> 
+    <div style="width:78%; margin: auto;" class="asia">
+        <!-- asia -->
+        <div>
+            <h2>ASIA</h2>
+            <hr style="width: 74px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div style="display: flex; margin-left: 40px;" class="leadingNews">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-l76i5vpm67r7vkjr1h8n40rgr0-20220403110659.jpeg" alt="error">
+                <h3>COVID-19 cases rise in Shanghai with millions under lockdown</h3>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-h4s2a4nd45tttagk7ml09mvv24-20220314082449.jpeg" alt="error">
+                <h3>Major Chinese cities impose COVID-19 restriction as cases spike</h3>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-188ggt9kb0c8i43gcbu87crta0-20220227114140.jpeg" alt="error">
+                <h3>North Korea blames US for Ukraine crisis</h3>
+            </div>
+            <div style="margin-right: 0px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-5f4r1ko3dpo0hj3d2fk7tp0mu3-20220408071231.jpeg" alt="error">
+                <h3>Pakistan Assembly reinstated for no-trust vote</h3>
+            </div>
+        </div>
+        <div style="display: flex; margin-top: 20px; margin-left: 40px;" class="smallNews">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-0224c9ttvi6fhab2jo98l7p0r2-20220209091025.jpeg" alt="error">
+                <h4>South Korea regrets Hyundai Pak's offensive post as India erupts</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-emjsluclb00plnrju4qdkqk2q4-20220130102052.jpeg" alt="error">
+                <h4>North Korea test-fires most powerful missile since 2017</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-7ho1ot5dfm94lcu7j9khoij875-20220122134259.jpeg" alt="error">
+                <h4>Chevron, Total to exit Myanmar over human rights abuses</h4>
+            </div>
+            <div style="margin-right: 0px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-m03sps011ptopa3qccklk0amj5-20220228095558.jpeg" alt="error">
+                <h4>North Korea says it tested cameras for spy satellite</h4>
+            </div>
+        </div>
+    </div>
+    <hr style="margin: auto; width:78%; margin-bottom: 1px; margin-top: 15px;">
+    <hr style="margin: auto; margin-bottom:10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);">
+    <div class="neighbours">
+        
+        <div>
+            <h2>MIDDLE EAST</h2>
+            <hr style="width: 212px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div class="neighboursNews">
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-vdkk9clen1pofbh9b27hd8ruf4-20220106170424.jpeg" alt="error">
+                <h3>Iran holds mass funeral for '80s war dead amid nuclear talks</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Malala Yousafzai slams Taliban for hijab decree, urges world leaders to take action</h4>
+            </div>
+            <div style="margin: 0px 20px 0px 20px; width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-qs4dvgmfd1rfev6k9jjb3p88q3-20211008194207.jpeg" alt="error">
+                <h3>Taliban official: At least 100 dead, wounded in Afghan blast</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Nothing changed between Taliban of 1990s and 2021: Report</h4>
+            </div>
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-rduo5ljl7868eoug056qmoqeo3-20220208105513.jpeg" alt="error">
+                <h3>'Terrorist groups' enjoy freedom in Afghanistan: UN experts</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Rights group expresses concern over Taliban's new media rules</h4>
+            </div>
+        </div>
+    </div> 
+    <hr style="margin: auto; width:78%; margin-bottom: 1px; margin-top: 15px;">
+    <hr style="margin: auto; margin-bottom:10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);">
+
+    <div style="width:78%; margin: auto;" class="asia">
+        <!-- america -->
+        <div>
+            <h2>AMERICA</h2>
+            <hr style="width: 150px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div style="display: flex; margin-left: 40px;" class="leadingNews">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-r26djqmuj3sf28fqapcq830v02-20220523125328.jpeg" alt="error">
+                <h3>China 'flirting with danger', US would defend Taiwan if Beijing invades: Biden</h3>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-3350pfv6ov7cfcih2srhgnmfr0-20220302101722.jpeg" alt="error">
+                <h3>U.S. to ban Russian flights from American airspace</h3>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-qo4lkc94037m2ug36rq5r9q8a6-20200706164004.jpeg" alt="error">
+                <h3>US waives in-person interview requirements for many visa applicants in India</h3>
+            </div>
+            <div style="margin-right: 0px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-sq1mft5d7g2r6qtfl3aqrsuq56-20220223071551.jpeg" alt="error">
+                <h3>US sanctions Russia for 'beginning' invasion of Ukraine</h3>
+            </div>
+        </div>
+        <div style="display: flex; margin-top: 20px; margin-left: 40px;" class="smallNews">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-obp4ib6kdde7cmmk7bmbmqjq55-20220322112631.jpeg" alt="error">
+                <h4>Biden says Putin considering using chemical, biological weapons in Ukraine
+                    AFP</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-bl6c6n6a2h1flql82u70ns6cu7-20180419025737.jpeg" alt="error">
+                <h4>Legislation introduced in US Senate to reform and stop abuse of H-1B visa system</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-9jk8ck7r37p2490j3ki73jpkn0-20220409113557.jpeg" alt="error">
+                <h4>Indian student shot dead in Canada, EAM Jaishankar expresses condolences</h4>
+            </div>
+            <div style="margin-right: 0px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-eoouf6o622k0n03i8oufbvseq4-20220216102459.jpeg" alt="error">
+                <h4>Joe Biden sees chance for Ukraine diplomacy, keeps pressure on Moscow</h4>
+            </div>
+        </div>
+    </div>
+    <hr style="margin: auto; width:78%; margin-bottom: 1px; margin-top: 15px;">
+    <hr style="margin: auto; margin-bottom:10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);">
+
+    <div class="neighbours">
+        <div>
+            <h2>EUROPE</h2>
+            <hr style="width: 130px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div class="neighboursNews">
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-52tvu0bk2sh1ahgbg9nqbnf4f1-20220127104321.jpeg" alt="error">
+                <h3>Blinken to visit Kyiv on Sunday: Zelensky</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Russia-Ukraine War: US President says won't engage in conflict with Russian forces</h4>
+            </div>
+            <div style="margin: 0px 20px 0px 20px; width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-ad9ucgi296p0ugdcqp1lpitu63-20220420113858.jpeg" alt="error">
+                <h3>Russia hits Ukrainian cities, pours more troops into war</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Russia cuts gas to Poland, Bulgaria, West vows arms for Kyiv</h4>
+            </div>
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-pgprdg8akmb01p0jvmj9ngn5t7-20220412115454.jpeg" alt="error">
+                <h3>Mayor: More than 10,000 civilians dead in Ukraine port city</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Russia bans UK PM, top Indian-origin ministers Sunak and Patel</h4>
+            </div>
+        </div>
+    </div> 
+    <hr style="margin: auto; width:78%; margin-bottom: 1px; margin-top: 15px;">
+    <hr style="margin: auto; margin-bottom:10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);">
+
+    <div style="width:78%; margin: auto;" class="asia">
+        <!-- africa -->
+        <div>
+            <h2>AFRICA</h2>
+            <hr style="width: 120px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div style="display: flex; margin-left: 40px;" class="leadingNews">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-6nniqrfaomn6t7eporafn0c8c3-20211126124744.jpeg" alt="error">
+                <h3>WHO to meet on Friday to assess new COVID-19 variant detected in South Africa</h3>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-ov1eb3bfl2rl0r4gthqf8m7q05-20211130153914.jpeg" alt="error">
+                <h3>Toddlers make up 10% of hospital cases in Omicron epicenter in S.Africa</h3>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-p7gblobppvmu7vlufl9hmuc851-20200708085406.jpeg" alt="error">
+                <h3>WHO: Mortality from COVID-19 around the world dropped to lowest level</h3>
+            </div>
+            <div style="margin-right: 0px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-5qj1tl23gofo440l5dl40kvkb5-20211201112213.jpeg" alt="error">
+                <h3>'It was scary': How South African scientists spotted the Omicron COVID variant</h3>
+            </div>
+        </div>
+        <div style="display: flex; margin-top: 20px; margin-left: 40px;" class="smallNews">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-ja07bfgf5tn2nnfga2jal56lu6-20210722104002.jpeg" alt="error">
+                <h4>South African firm to make Pfizer vaccine, first in Africa</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-b5g1656kdq17f420u6o69scq43-20211226134924.jpeg" alt="error">
+                <h4>South African anti-apartheid campaigner Archbishop Tutu dies aged 90</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-pod3hlt2j0232v4a395icv9924-20211231114814.jpeg" alt="error">
+                <h4>South Africa lifts curfew as Omicron wave subsides</h4>
+            </div>
+            <div style="margin-right: 0px;">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-p2lkd7m7n7kgqupmqcaodirc44-20211217135205.jpeg" alt="error">
+                <h4>South Africa hospitalization rate falls 91% in Omicron wave</h4>
+            </div>
+        </div>
+    </div>
+    <hr style="margin: auto; width:78%; margin-bottom: 1px; margin-top: 15px;">
+    <hr style="margin: auto; margin-bottom:10px; width:78%; height: 3px; background-color: rgb(167, 151, 151);">
+
+    <div class="neighbours">
+        <div>
+            <h2>AUSTRALIA AND NEW ZEALAND</h2>
+            <hr style="width: 479px; background-color: rgb(250, 73, 3); height: 2.5px; margin-bottom: 10px; border-style: none;">
+        </div>
+        <div class="neighboursNews">
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-o77i84sf4ag8l2h7oc22ikqic2-20211229104217.jpeg" alt="error">
+                <h3>Coronavirus cases surge across Australia as omicron explodes</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Novavax becomes Australia's 5th approved COVID-19 vaccine</h4>
+            </div>
+            <div style="margin: 0px 20px 0px 20px; width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-300ar600416h8cs9o5d31cbm05-20210906145004.jpeg" alt="error">
+                <h3>COVID lockdown to be lifted across New Zealand, except Auckland</h3>
+                <h4 style="margin-top: 20px; color: #323435">#Quad meet puts Aussies in a fix</h4>
+            </div>
+            <div style="width: 31%;">
+                <img style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-40peq89l30hqndnpoomdfv8jd3-20220320142747.jpeg" alt="error">
+                <h3>Hot poles: Antarctica, Arctic 70 and 50 degrees above normal</h3>
+                <h4 style="margin-top: 20px; color: #323435">#New Zealand PM Jacinda Ardern cancels her wedding due to Omicron surge</h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+function bigImg(x) {
+  x.style.boxShadow = "rgba(0, 0, 0, 0.35) 0px 5px 15px";
+}
+
+function normalImg(x) {
+  x.style.boxShadow = "#ffffff 0px 0px 0px";
+}
+</script>
