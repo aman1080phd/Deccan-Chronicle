@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DECCAN CHRONICAL</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0%;
+        }
+
+
+        .container{
+        margin: auto;
+        width: 80%;
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+        #navbar{
+        width: 100%;
+        display: flex;
+        background-color: black;
+        color: white;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+        height: 50px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        position: sticky;
+        top: 0;
+    }
+    .mid{
+        display: flex;
+        margin: 0 38px 0 16px;
+    }
+    .socialMedia>ul{
+        display: flex;
+        align-items: center;
+    }
+    .socialMedia>ul>li{
+        padding: 0 9px 0 9px;
+    }
+    .right{
+        display: flex;
+    }
+    .first{
+        border-right: 2px solid white;
+        padding-right: 5px;
+    }
+    .rightFirst{
+        border-right: 2px solid white;
+        padding-right: 6px;
+    }
+    .rightFirst+p{
+        margin-left: 6px;
+    }
+    .left{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .socialMedia>ul>li:hover{
+        cursor: pointer;
+    }
+    #checkbox:hover{
+        cursor: pointer;
+    }
+
+    #navbar>.left>i:hover{
+        cursor: pointer;
+    }
+    .first:hover{
+        cursor: pointer;
+    }
+    .second:hover{
+        cursor: pointer;
+    }
+    .socialMedia>ul>li>img{
+        display: flex;
+        justify-content: center;
+        width: 32px;
+    }
+    li{
+        list-style: none;
+        
+    }
+    i{
+        font-size: 26px;
+    }
+    /* ////////////////////////////logo//////////////////////// */
+    .logo{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 26px 0 26px 0;
+       border-bottom: 4px solid black;
+    }
+    .logo>span{
+        margin-top: 30px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    /* ////////////////////navbar2/////////////////////// */
+    .navbar2{
+        margin: auto;
+        /* margin-left: 134px; */
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid black;
+        margin-top: 12px;
+    }
+    .navbar2>ul{
+        display: flex;
+        align-items: center;
+    }
+    .navbar2>ul>li{
+        margin-bottom: 12px;
+    }
+    .navbar2>ul>li>a{
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        padding:12px;
+    }
+    .fa-angle-down{
+        font-size: 14px;
+    }
+    /* ----------------------advertisement----------------------- */
+    .advertisement{
+        margin-top: 20px;
+        width: 100%;
+        height: 160px;
+        border: 1px solid black;
+    }
+    /* -------------------date---------------------------------- */
+    .date{
+    color:black;
+    width: 30vw;
+    height: 44px;
+}
+
+
+
+        h3{
+            text-decoration: underline red 3px;
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+      
+        .h3{
+           font-style: arial; 
+          margin-left: 0px;
+          text-decoration: underline red 3px;
+          margin-top: 25px;
+          cursor: pointer;
+        }
+        .gallery2{
+            /* border: 1px solid red; */
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,210px);
+            width: 52%;
+            margin-left: 10px;
+            height: 450px;
+            gap: 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .g4{
+           width: 100%;
+            /* border: 1px solid teal; */
+            display: flex;
+            height: 470px;
+        }
+        .g5{
+            /* border: 1px solid yellow; */
+            width: 45%;
+            
+            margin-left: 30px;
+        }
+        .g5>p{
+            color: teal;
+            text-align: center;
+        }
+        .g5>img{
+            width: 100%;
+            height: 60%;
+        }
+        /* #gallery2>div{
+            border: 1px solid red;   
+        } */
+        .gallery2>div>img{
+            width: 100%;
+            height: 55%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        h4{
+            margin-top: 20px;
+        }
+
+            .gallery3{
+            /* border: solid 1px red; */
+            width: 100%;
+            margin: auto;
+            height: 670px;
+            margin-top:30px;
+            background-color:rgb(230,230,230);
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.751) 0px 3px 6px, rgba(0, 0, 0, 0.687) 0px 3px 6px;
+          
+        }
+      
+        .gallery3>div{
+            /* border: solid 1px red; */
+            display: grid;
+            grid-template-columns: repeat(3,320px);
+            grid-template-rows: repeat(2,260px);
+            gap: 20px;
+            justify-content: space-evenly;
+            margin-top: 10px;
+        }
+        .gallery3>div>div{
+            border: solid 1px transparent;
+            /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+            cursor: pointer;
+        }
+        h2{
+            text-decoration: underline red 3px; 
+            padding-left:  21px;
+            padding-top: 15px;
+            cursor: pointer;
+            
+        }
+        .gallery3>div>div>img{
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            
+        }
+
+
+        .footer{
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color:rgb(211, 199, 199);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+}
+.google{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.google>input{
+    width: 50%;
+    height: 25px;
+}
+#srchBtn{
+    margin-top: 5px;
+}
+#srchBtn>i{
+   font-size: 10px;
+   padding: 4px;
+}
+.footerNav>ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px 15px 5px 15px;
+    
+}
+.footerNav>ul>li{
+    font-size: 12px;
+    font-weight: 600;
+    color: gray;
+    padding: 4px;
+}
+.copyright>p{
+    color: gray;
+}
+#srchBtn:hover{
+    background-color: black;
+    color: white;
+}
+#search{
+    margin-top: 15px;
+}
+
+
+
+
+#worldGallery{
+            width: 100%;
+            margin: auto;
+            padding: 20px 10px 0px 10px;
+            background-color:rgb(230,230,230);
+            margin-top: 20px;
+            display: flex;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.751) 0px 3px 6px, rgba(0, 0, 0, 0.687) 0px 3px 6px;
+        }
+        #worldGallery > div:nth-child(1){
+            width: 65%;
+            /* border: 1px solid red; */
+            margin-top: -10px;
+        }
+        #worldGallery > div:nth-child(2){
+            width:35%;
+            margin-left: 2px;
+            padding-left:20px;
+            padding-right: 10px;
+            /* border: 1px solid red; */
+            margin-top: -10px;
+            cursor: pointer;
+        }
+        #focuspic{
+            width: 100%;
+            height: 90%;
+            border-radius: 5px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+         h2{
+            margin-top: -10px;
+            margin-left: -8px;
+         }
+        #mg > div > img{
+            width: 45%;
+            height: 87px;
+            margin-right: 30px;
+            
+        }
+        #mg > div{
+            display: flex;
+            margin-bottom: 5px;
+            font-size: 19px;
+            padding: 10px;
+        }
+
+      
+  
+    </style>
+</head>
+<body>
+   
+
+    <div id="navbar">
+
+        <div class="left">
+
+        <i class="fa-solid fa-bars"></i>
+        
+    <div class="mid">
+        <p class="first">e-Paper</p>
+        <p class="second">Sunday Chronicle</p>
+    </div>
+
+    <div class="socialMedia">
+        <ul>
+       <li> <i class="fa-brands fa-facebook-f"></i> </li>
+      <li>  <i class="fa-brands fa-twitter"></i> </li>
+      <li>  <i class="fa-brands fa-instagram"></i> </li>
+      <li> <img src="/deccan logo.png" alt=""></li>
+    </ul>
+    </div>
+
+</div>
+
+    <div class="right">
+       <p class="rightFirst"> <input id="checkbox" type="checkbox">Auto Refresh </p>
+       <p>Corporate Insolvency Resolution Process</p>
+    </div>
+
+    </div>
+    <!--///////////////////////2nd Logo////////////////////////////  -->
+    <div class="container">
+        <!-- /////////////////////////////////////////////////////// -->
+    <div class="logo">
+        <img src="/deccan logo2.png" alt="">
+        <span class="date">
+            <div class="date"></div>
+        </span>
+    </div>
+<!-- //////////////////////// 2nd Navbar////////////////////////////-->
+
+
+<div class="navbar2">
+    <ul>
+        <li><a href="">
+            <i class="fa fa-home"></i>
+        </a> </li>
+        <li>  <a href="#">
+            Nation
+         </a></li>
+        <li><a href="#">
+            South
+         </a></li>
+        <li><a href="#">World</a> </li>
+        <li><a href="#">Entertainment</a> </li>
+        <li><a href="#">Jobs & Education</a> 
+        </li>
+        <li><a href="#">Sports</a> </li>
+        <li><a href="#">Technology</a> </li>
+        <li><a href="#">Lifestyle</a> </li>
+        <li><a href="#">Gallery</a> </li>
+        <li>
+            <a href="#">
+               More.... <i class="fa fa-angle-down"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<div id="worldGallery">
+    <div >
+        <h2>TOP GALLERY</h2>
+        <!-- <hr class="galleryhr"> -->
+        <img id="focuspic" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-jcdppve1p57gslfudkjj2o3sd5-20220502133355.Medi.jpeg" alt="error">
+    </div>
+    <div class="moregallery">
+        <h2>MORE GALLERIES</h2>
+        <!-- <hr class="MoreGalleryhr"> -->
+        <div id="mg">
+            <div onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-jcdppve1p57gslfudkjj2o3sd5-20220502133355.Medi.jpeg" alt="error">
+                <p>In Pictures | COP26 protesters in Glasgow</p>
+            </div>
+            <div onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-mbrh668e4c5hlkkhd8ul33njk5-20220412003743.Medi.jpeg" alt="error">
+                <p>This year, Hajj pilgrims to be given sterilised pebbles</p>
+            </div>
+            <div onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-8g2q1og4pt9pmf7nan3h7rjjg1-20211119134558.Medi.jpeg" alt="error">
+                <p>In Pictures| Standoff with federal agents continues in Portland</p>
+            </div>
+            <div onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-dmaetsmltie50e4okrnrnbo723-20211113155011.Medi.jpeg" alt="error">
+                <p>For these penguins in Singapore’s city zoo, lockdown is flippin' fun</p>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+
+    <h3 class="h3">ENTERTAINMENT</h3>
+    <div class="g4">
+    <div class="gallery2">
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-3e60l6v07vk8jd76r50eikc391-20201209155425.jpeg" alt="">
+            <h4>Niharika and Chaitanya wedding ceremony</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-an4v33r20oo3l8ussn00bv8gu2-20200810174058.jpeg" alt="">
+            <h4>Rana Daggubati and Miheeka Bajaj performed the traditional Satyanrayanara Vratam</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-es84r4783g3f7ti3uq07f80o40-20200809175935.jpeg" alt="">
+            <h4>Actor RanaDaggubati and entrepreneur Miheeka Bajaj tied the knot on Saturday evening</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-nb73u1i5ep3absdussa9dhj7t3-20200406113529.jpeg" alt="">
+            <h4>South stars stand in solidarity with PM's 9 baje 9 minute initiative</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-iovn97hgi9q8i57g1r8c83p5v4-20200215115257.jpeg" alt="">
+            <h4>Fashion on streets: Here's the best looks from New York Fashion Week</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-46c9mncphl3t47s63e4gi1ble2-20200210123743.jpeg" alt="">
+            <h4>Meet the winners of the 92nd Academy Awards</h4>
+        </div>
+        
+    </div>
+    <div class="g5">
+        <p>ADVERTISEMENT</p>
+        <img src="https://static.wixstatic.com/media/abaebb_d07e8b012b07478f9bcc06a6a07d08a3~mv2.gif" alt="">
+    </div>
+    </div>
+
+   
+    <div class="gallery3">
+        <h2>LIFESTYLE</h2>
+        <div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-5c1droacmv2cna13ff287lhjo0-20200429082552.jpeg" alt="">
+                <h4>My life in Covid-19 quarantine</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-rcf7i7ej6lusuevh8j9d3rg7f1-20200314144258.jpeg" alt="">
+                <h4>Framing the Mundane</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-lm5svqiloml481tidqq5t09s82-20200209162556.jpeg" alt="">
+                <h4>The best pictures from New York Fashion Week</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-i2h2i9buncmtmekijibjlr84d0-20200308125825.jpeg" alt="">
+                <h4>A selection of photographer TK Sandeep's work</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-80hhgc3rhafp4ke60e8pp9v0e6-20191108134146.jpeg" alt="">
+                <h4>Valentino fashionably interprets A Midsummer's Night Dream</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-5p043kci875a3lf3rj2m4v6476-20191001145309.jpeg" alt="">
+                <h4>India gears up for Navratri</h4>
+            </div>
+        </div>
+        
+    </div>
+    <h3 class="h3">TECHNOLOGY</h3>
+    <div class="g4">
+    <div class="gallery2">
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-uite3ht17d3qokiucq4k6ha7u0-20200106124032.jpeg" alt="">
+            <h4>CES 2020: Samsung QLED 8K TV gets shown-off</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-v49nbrup06ddnafqs6nqrig784-20191115100410.jpeg" alt="">
+            <h4>Experience Guruparab in Amritsar with Samsung's stunning #IndiaonGalaxy series</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-iiil0cn21ludapnv2i1v17hgq6-20191011100718.jpeg" alt="">
+            <h4>Dussehra festivities shot on iPhone 11 Pro Max</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-pchrhofirmi4uto5gh0ttbqp05-20190911133837.jpeg" alt="">
+            <h4>Everything Apple launched at its September iPhone event</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-tb6kspf4gfd5bg8l1ai8kaesq7-20190903183325.jpeg" alt="">
+            <h4>Best budget fitness trackers under Rs 3000</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-tb6kspf4gfd5bg8l1ai8kaesq7-20190827154942.jpeg" alt="">
+            <h4>Top True Wireless Earbuds under Rs 5,000</h4>
+        </div>
+    </div>
+    <div class="g5">
+        <p>ADVERTISEMENT</p>
+        <img src="https://smejoinup.com/wp-content/uploads/2017/11/adwords-web-campaigns.gif" alt="">
+    </div>
+    </div>
+
+    <div class="gallery3">
+        <h2>SPORTS</h2>
+        <div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-q3qaemi975snai7kir9mh9om61-20210723191813.jpeg" alt="">
+                <h4>My life in Covid-19 quarantine</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-oju0aqlan3ibacnr9820japfh1-20200321100524.jpeg" alt="">
+                <h4>Framing the Mundane</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-2opdlm8e3v8ae0k4t2p5ckifh7-20200311154914.jpeg" alt="">
+                <h4>The best pictures from New York Fashion Week</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-028qhhsmm59okfnpe6p457r137-20200302180557.jpeg" alt="">
+                <h4>A selection of photographer TK Sandeep's work</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-mgu4v858rtpfe9u7f1jcutptk1-20200229175350.jpeg" alt="">
+                <h4>Valentino fashionably interprets A Midsummer's Night Dream</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-a1kunmdk653l858i15m2fgfnr7-20200227164622.jpeg" alt="">
+                <h4>India gears up for Navratri</h4>
+            </div>
+        </div>
+
+    </div>
+
+    <h3 class="h3">NATION</h3>
+    <div class="g4">
+    <div class="gallery2">
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-jcdppve1p57gslfudkjj2o3sd5-20220502133355.jpeg" alt="">
+            <h4>In Pictures | India reels under intense heatwave</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-mbrh668e4c5hlkkhd8ul33njk5-20220412003743.jpeg" alt="">
+            <h4>In Pictures | TRS protest in Delhi</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-8g2q1og4pt9pmf7nan3h7rjjg1-20211119134558.jpeg" alt="">
+            <h4>In Pictures | Celebrations at Ghazipur border after farm laws repeal announcement</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-1nskatpnrbcp2vgdumm7bkn1e6-20211105110754.jpeg" alt="">
+            <h4>In Pictures | Itchy throats, watery eyes: Delhi's AQI severe after Diwali</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-0527023ub19rimmp63roouu6q0-20210812224011.jpeg" alt="">
+            <h4>Fashion on streets: Here's the best looks from New York Fashion Week</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-3ckf7pqmedlco86jeqbohbkc50-20210708113011.jpeg" alt="">
+            <h4>In Pictures | Health workers vaccinate Kashmir nomads</h4>
+        </div>
+    </div>
+    <div class="g5">
+        <p>ADVERTISEMENT</p>
+        <img src="https://storage.googleapis.com/support-forums-api/attachment/thread-4653604-3540900375334902845.gif" alt="">
+    </div>
+    </div>
+    
+
+    <div class="gallery3">
+        <h2>WORLD</h2>
+        <div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-dmaetsmltie50e4okrnrnbo723-20211113155011.jpeg" alt="">
+                <h4>My life in Covid-19 quarantine</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-e4iu0nlq73brfqqkkb7ritd8j1-20200501124511.jpeg" alt="">
+                <h4>Framing the Mundane</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-v7hd9r03mm20tbn9h879icamc1-20200727100733.jpeg" alt="">
+                <h4>The best pictures from New York Fashion Week</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-2gjsa7d44bh66b9jqdbr045ht4-20200725181931.jpeg" alt="">
+                <h4>A selection of photographer TK Sandeep's work</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-r6faopjndrq2sjtkfp8oisapu3-20200312173616.jpeg" alt="">
+                <h4>Valentino fashionably interprets A Midsummer's Night Dream</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-cdj6o68j4kf9p7o19n2jqvq5r5-20200311123700.jpeg" alt="">
+                <h4>India gears up for Navratri</h4>
+            </div>
+        </div>
+
+    </div>
+
+    <h3 class="h3">BUSINESS</h3>
+    <div class="g4">
+    <div class="gallery2">
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-qo4lkc94037m2ug36rq5r9q8a6-20200803135711.jpeg" alt="">
+            <h4>Jammu & Kashmir’s economy struggles amid lockdowns</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-enq280v3aelhlh9s7f4bnb2b17-20200802220936.jpeg" alt="">
+            <h4>Mumbai malls to reopen but the expericence will be very different </h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-dqcarg2ev66gnde9l9rsmdq000-20190830125943.jpeg" alt="">
+            <h4>Photos: Revolt RV 400 electric bike</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-ph5u7r3a8likhbtbqvon9gknb7-20190729125019.jpeg" alt="">
+            <h4>7 expensive sports bikes in India</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-k22vk4bh9koiobgjav2c126g25-20190703143343.jpeg" alt="">
+            <h4>Top 5 car news of the week</h4>
+        </div>
+        <div>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-ggafn70bhln0kag3c87ml9r0u3-20190429113423.jpeg" alt="">
+            <h4>Budget Rs 10 lakhs: 8 cars that you can check out right now</h4>
+        </div>
+    </div>
+    <div class="g5">
+        <p>ADVERTISEMENT</p>
+        <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/faster.gif" alt="">
+    </div>
+    </div>
+
+    <div class="gallery3">
+        <h2>SCIENCE</h2>
+        <div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-tifd6jonrf42dofiq3p162qom5-20200621151859.jpeg" alt="">
+                <h4>Pics: Annular Solar Eclipse as seen in different parts of the world</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-16tmj1d7trb1pbtss5i1e24p30-20180917101524.jpeg" alt="">
+                <h4>ISRO gains success in putting two UK satellites into orbit</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-slunbbh328v9e8iekli3to6rc6-20180728140203.jpeg" alt="">
+                <h4>How the world enjoyed the Blood Moon spectacle</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-0broo9fg0ebr874kkasuq2n253-20180402122626.jpeg" alt="">
+                <h4>GSAT-6A’s track lost before final orbit manoeuvre, scientists still searching</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-ncl43iqlvhlghsmuv0ecpv2fe3-20180207114750.jpeg" alt="">
+                <h4>SpaceX blasts off Elon Musk's Tesla Roadster into space</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-8o2c6fbf36c5sl5iiiop4fhdk1-20180201091158.jpeg" alt="">
+                <h4>Supermoon: How the world saw the blue-blood lunar surface</h4>
+            </div>
+        </div>
+
+    </div>
+
+   
+
+    <div class="footer">
+        <div class="google">
+        <input type="text" id="search" placeholder="Google Search" value="">
+        <button id="srchBtn"> <i class="fa-solid fa-magnifying-glass">  Search</i>  </button>
+    </div>
+    
+        <div class="footerNav">
+            <ul>
+                <li>HOME</li>
+                <li>ASIAN AGE</li>
+                <li>ANDHRABHOOMI</li>
+                <li>FINANCIAL CHRONICLE</li>
+                <li>ABOUT US</li>
+                <li>CONTACT US</li>
+                <li>CLASSIFIEDS</li>
+                <li>BOOK CLASSIFIEDS</li>
+                <li>FEEDBACK</li>
+                <li>CAREERS</li>
+                <li>E-PAPER</li>
+                <li>PRIVACY POLICY</li>
+            </ul>
+    
+            <div class="copyright">
+                <p>Copyright © 2015 - 2022 Deccan Chronicle.
+                    Designed, Developed & Maintained By Daksham</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<script>
+    let searchBtn= document.querySelector("#srchBtn");
+let search= document.querySelector("#search");
+
+searchBtn.addEventListener("click", function(){
+    let url= 'https://www.google.com/search?q=' + search.value ;
+    window.open(url);
+})
+
+
+
+
+setInterval(displayClock, 500);
+function displayClock(){
+const datePlace= document.querySelector(".date");
+let today = new(Date);
+let dd= today.getDate();
+let mm= today.getMonth()+1;
+let yyyy= today.getFullYear();
+let hour = today.getHours();
+let min = today.getMinutes();
+let sec = today.getSeconds();
+let prepand = (hour>=12)?"PM" : "AM";
+
+if (hour>12 ) {
+    hour = hour - 12 ;
+}else if (hour == 0) {
+    hour = 12 ;
+}
+
+
+if (hour<10){
+    hour = "0" + hour;
+}else{
+    hour = hour
+}
+
+if (min<10){
+    min = "0" + min;
+}else{
+    min = min
+}
+
+if (sec<10){
+    sec = "0" + sec;
+}else{
+    sec = sec
+}
+    
+if (mm<10){
+    mm = "0" + mm;
+}else{
+    mm = mm
+}
+if (dd<10){
+    dd = "0" + dd;
+}else{
+    dd = dd
+}
+
+datePlace.innerHTML = dd + "-" + mm + "-" + yyyy + " Last Update " + hour +":" +min +":" + sec + prepand;
+}
+
+displayClock();
+/////////////////////////////////////////////////////////////////
+
+
+
+
+function bigImg(x) {
+      x.style.boxShadow = "rgba(0, 0, 0, 0.35) 0px 5px 15px";
+    }
+    
+    function normalImg(x) {
+      x.style.boxShadow = "#ffffff 0px 0px 0px";
+    }
+</script>
+
+
+
